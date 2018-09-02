@@ -2,6 +2,7 @@
 base_url = "http://code.liquidthink.net"
 
 title = "Alan Turing"
+# a description; you can use markdown here if you like
 description="\"*to develop the skill of correct thinking is in the first place to learn what you have to disregard. In order to go on, you have to know what to leave out: this is the essence of effective thinking.*\" \n -Kurt Gödel"
 default_language = "en"
 

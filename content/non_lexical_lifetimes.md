@@ -1,5 +1,5 @@
 +++
-title = "Non-Lexical Lifetimes are Awesome!"
+title = "Welcome to Ergo, a sbvtle inspired theme"
 date = 2018-08-31
 category = "test"
 +++

@@ -84,8 +84,7 @@ p {
     border: 5px solid $accent;
     border-radius: 100%;
     margin: 0 auto;
-    transition-property: all;
-    transition-duration: 0.5s;
+    transition: all 0.5s ease-in-out;
     > a {
         width: 115px;
         height: 115px;
@@ -152,6 +151,7 @@ p {
     }
     display: block;
     opacity: 0;
+    transition: opacity 0.70s ease-out 1.7s;
 }
 
 
@@ -178,29 +178,28 @@ p {
 }
 
 a#article_link, a#article_link:visited {
+    transition: all 0.35s ease-out;
     text-decoration: none;
     color: $title;
 }
+
 a#article_link:hover {
     color: $accent;
-    transition-property: all;
-    transition-duration: 0.35s;
+    transition: all 0.35s ease-in;
 }
 
 h1.article_title:hover + ul#frontmatter {
     opacity:1;
-    transition-property: all;
-    transition-duration: 0.70s;
+    transition: opacity 0.30s ease-in;
 }
 
 h1.article_title {
     color: $title;
-    padding-left: 10px;
     padding-right: 10px;
     margin: 0 auto;
     max-width: 600px;
     font-size: 40px;
-    line-height: 35px;
+    line-height: 38px;
     margin-bottom: 15px;
     margin-top: 0px;
 }
@@ -210,11 +209,12 @@ h1.article_title {
     text-align: left;
     margin: auto;
     margin-bottom: 4em;
+    max-width: 600px;
     > ul {
         max-width: 600px;
     }
     > a {
-        max-width: 600px;
+        margin-top: 0.5em;
     }
     > p {
         max-width: 600px;
@@ -272,29 +272,43 @@ nav.pagination {
     }
 }
 
-a.button {
-    padding: 0px;
+a.small {
     font-size: 17px;
+    padding: 0px;
+    display: inline-block;
+    line-height: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+}
+
+a.medium {
+    font-size: 17px;
+    padding: 0px;
     line-height: 35px;
     display: inline-block;
     padding-left: 25px;
     padding-right: 25px;
-    -webkit-border-radius: 30px;
     border-radius: 30px;
-    -moz-border-radius: 30px;
+}
+
+a.font_faint {
     font-weight: 100;
+}
+
+a.button {
+    font-weight: 300;
     text-transform: lowercase;
     background-color: transparent;
     color: $text;
     border: 1px solid $outline;
     text-decoration: none;
-    transition-property: all;
-    transition-duration: 0.35s;
+    transition: all 0.35s ease-in-out;
 }
 
 a.button:hover {
     background-color: $accent;
     color: $background;
     border: 1px solid $accent;
-    font-weight: normal;
+    font-weight: unset;
 }
