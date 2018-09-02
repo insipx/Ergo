@@ -9,8 +9,8 @@
             <figure class="user_logo">
                 <a href="{{config.base_url}}" style="background-image: url({{config.base_url}}/img/{{config.extra.profile}}"></a>
             </figure>
-            <h2>{{config.title}}</h2>
-            <h3 class="quote">{{config.description | markdown(inline=true)}}</h3>
+            <h2 class="site_title">{{config.title}}</h2>
+            <div>{{config.description | markdown(inline=true)}}</div>
             {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url) }}
             {% endblock header %}
         </header>

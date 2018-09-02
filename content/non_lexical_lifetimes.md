@@ -4,8 +4,6 @@ date = 2018-08-31
 category = "test"
 +++
 
-# Hey all
-
 This is a small example post of stuff you can do with the `ergo` theme.
 We'll try to represent all possible markdown and shortcode combinations here
 so you can develop easily.
@@ -32,13 +30,14 @@ so you can develop easily.
 
 ###### It won't do anything
 
-We can also *italisize* stuff or however that's spelled.  I **don't** know how to spell.
+We can also *italicize* stuff, or make it **bold**.
 
 # Code
 
 Want some Rust code?  We got Rust code.
 
 ```rust
+
 // `vst` uses macros, so we'll need to specify that we're using them!
 #[macro_use]
 extern crate vst;
@@ -51,6 +50,7 @@ impl Plugin for Whisper {
         }
     }
 }
+
 ```
 
 We can also add a filename to our code blocks which is super useful when

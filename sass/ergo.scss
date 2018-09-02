@@ -34,7 +34,7 @@ html, body {
     z-index: 50;
 }
 
-h1,h2,h3,h4,h5,h6 { // Choosing a font is hard...
+h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
     margin-bottom: 12px;
     line-height: 1;
@@ -42,31 +42,39 @@ h1,h2,h3,h4,h5,h6 { // Choosing a font is hard...
 }
 
 h1 {
-
+    color: $accent;
+    font-size: 2.4em;
 }
 
 h2 {
-    font-size: 2.5em;
-    font-weight: 900;
-    color: $accent;
+    font-size: 2em;
 }
 
 h3 {
-    font-weight: 300;
+    font-size: 1.4em;
 }
 
 h4 {
-
+    font-size: 1.2em;
 }
 
 h5 {
-
+    font-size: 1.2em;
 }
 
-p {
+h6 {
+    font-size: 1.2em;
+}
+
+p,li,ul {
     font-size: 1em;
     color: $text;
     line-height: 1.7;
+}
+
+pre {
+    border-radius: 0.25em;
+    padding: 0.65em;
 }
 
 @keyframes slidein {
@@ -124,11 +132,23 @@ p {
         margin-bottom: 0.25em;
         padding: 0.25em;
     }
-}
-
-.quote {
-    opacity: 0.7;
-    line-height: 1.2;
+    > h2 {
+        font-size: 2.5em;
+        font-weight: 900;
+        color: $accent;
+    }
+    > div {
+        opacity: 0.7;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: auto;
+        max-width: 625px;
+        display: block;
+        text-align: center;
+        * {
+            max-width: 625px;
+        }
+    }
 }
 
 .article_split {
@@ -205,14 +225,13 @@ h1.article_title:hover + ul#frontmatter {
 }
 
 h1.article_title {
-    color: $title;
-    padding-right: 10px;
+    padding-right: 5px;
     margin: 0 auto;
-    max-width: 600px;
-    font-size: 40px;
-    line-height: 38px;
+    font-size: 38px;
+    line-height: 42px;
     margin-bottom: 15px;
     margin-top: 0px;
+    font-weight: 700;
 }
 
 .post_list_item {
@@ -283,11 +302,12 @@ nav.pagination {
 }
 
 .post_container {
-    margin: 0;
+    margin: 0 auto;
     margin-top: 130px;
     padding: 0;
     display: block;
     position: relative;
+    max-width: 625px;
     > article {
         margin-bottom: 30px;
         position: relative;
@@ -296,9 +316,8 @@ nav.pagination {
 }
 
 .frontmatter_page {
-    opacity: 0.3;
+    opacity: 0.5;
     transition: opacity 0.35 ease-in-out 2s;
-    max-width: 600px;
     margin: 0 auto;
 }
 

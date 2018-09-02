@@ -31,6 +31,8 @@ figure.mini_logo + h5 {
     text-transform: uppercase;
     font-size: 16px;
     margin-top: 40px;
+    position: relative;
+    z-index: 100;
     > a {
         text-decoration: none;
         color: $accent;

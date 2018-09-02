@@ -24,6 +24,7 @@
     padding:0;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
     right: 0;
+    z-index: 95;
 }
 
 .sidebarMenuInner li:not(:first-child){
@@ -106,22 +107,22 @@ label {
   display: block;
   cursor: pointer;
   position: absolute;
-  width: 50vw;
-  height: 50vw;
-  max-width: 100px;
-  max-height: 100px;
+  width: 25vw;
+  height: 25vw;
+  max-width: 75px;
+  max-height: 75px;
 }
 
 @media (min-aspect-ratio: 1/1) {
   label {
-    width: 50vh;
-    height: 50vh;
+    width: 25vh;
+    height: 25vh;
   }
 }
 
 .menu--1 label {
     top: 0;
-    right: 0;
+    right: 1em;
     z-index: 100;
 }
 
@@ -140,9 +141,15 @@ path {
   --length: 24;
   --offset: -38;
   top: 0%;
-  right: 0%;
+  right: 1em;
   z-index: 91;
+  position: fixed;
+  @media screen and (max-width: 750px) { // if screen is too small, don't let the menu drag when trying to read text
+      position: absolute;
+  }
 }
+
+// 750 pixels position = absolute
 
 .dots {
   --length: 0;
