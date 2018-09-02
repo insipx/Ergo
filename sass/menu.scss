@@ -96,17 +96,9 @@
         }
     }
 }
-/*
-input#openSidebarMenu {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    display: none;
-}
-*/
+
 /* BEGIN SVG */
-
-
-input#menu_icon {
+input#openSidebarMenu {
     display: none;
 }
 
@@ -135,13 +127,13 @@ label {
 
 path {
   fill: none;
-  stroke: #000;
+  stroke: $title;
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: var(--length) var(--total-length);
   stroke-dashoffset: var(--offset);
-  transition: all .8s cubic-bezier(.645, .045, .355, 1);
+  transition: all 350ms cubic-bezier(.645, .045, .355, 1);
 }
 
 .menu {
@@ -149,6 +141,7 @@ path {
   --offset: -38;
   top: 0%;
   right: 0%;
+  z-index: 91;
 }
 
 .dots {
@@ -161,25 +154,34 @@ circle {
   opacity: 0;
 }
 
-label:hover circle {
-  opacity: 0.50;
+input[type=checkbox]:checked ~ #sidebarMenu {
+    transform: translateX(0);
 }
 
-.cross input:checked+svg {
-  .line--1,
-  .line--3 {
-    --length: 22.627416998;
-  }
-  .line--2 {
-    --length: 0;
-  }
+input[type=checkbox]:checked ~ .cross > svg {
+    .line--1,
+    .line--3 {
+        --length: 22.627416998;
+    }
+    .line--2 {
+        --length: 0;
+    }
+}
+input[type=checkbox]:checked ~ .back > svg {
+    .line--1,
+    .line--3 {
+        --length: 8.602325267;
+    }
 }
 
-.back input:checked+svg {
-  .line--1,
-  .line--3 {
-    --length: 8.602325267;
-  }
+input[type=checkbox]:checked ~ .menu--1 > svg {
+    .line--1,
+    .line--3 {
+        --offset: -94.1149185097;
+    }
+    .line--2 {
+        --offset: -50;
+    }
 }
 
 .menu--1 {
@@ -189,60 +191,5 @@ label:hover circle {
   }
   .line--2 {
     --total-length: 70;
-  }
-  input:checked+svg {
-    .line--1,
-    .line--3 {
-      --offset: -94.1149185097;
-    }
-    .line--2 {
-      --offset: -50;
-    }
-  }
-}
-
-
-@media screen and (min-width: 800px) {
-  .debug,
-  #menu-or-dots {
-    opacity: .8;
-    display: block;
-    position: absolute;
-    z-index: 1;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    background: #fff;
-    color: #fff;
-    width: 150px;
-    height: 100px;
-    line-height: 150px;
-    text-align: center;
-    user-select: none;
-    &:hover {
-      opacity: 1;
-    }
-    &.active {
-      background: #fff;
-      color: #ffffff;
-    }
-  }
-  .debug {
-    transform: rotate(-45deg);
-    transform-origin: 0% 100%;
-  }
-  #menu-or-dots {
-    font-weight: normal;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-    right: 0;
-    top: 0;
-    &.menu:before {
-      content: '⋮';
-    }
-    &.dots:before {
-      content: '☰';
-    }
-  }
-  .debug.active+.grid path.line--debug {
-    display: inherit;
   }
 }
