@@ -22,10 +22,10 @@
         {% include "menu.html" %}
         <header class="header">
             <figure class="user_logo">
-                <!-- put the logo here -->
+                {% block profile %} <a href="{{config.base_url}}" style="background-image: url(img/{{config.extra.profile}}"></a> {% endblock profile %}
             </figure>
             <h2>{% block name %} {{config.title}} {% endblock name %}</h2>
-            <h3 class="quote">{% block description %} {{config.description}} {% endblock description %}</h3>
+            <h3 class="quote">{% block description %} {{config.description | markdown(inline=true)}} {% endblock description %}</h3>
         </header>
         <section class="post_list">
             {% block content %}

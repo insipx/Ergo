@@ -68,6 +68,14 @@ p {
     line-height: 1.7;
 }
 
+@keyframes slidein {
+    0% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 .user_logo {
     width: 125px;
     height: 125px;
@@ -78,20 +86,39 @@ p {
     margin: 0 auto;
     transition-property: all;
     transition-duration: 0.5s;
+    > a {
+        width: 115px;
+        height: 115px;
+        display: block;
+        margin: 0 auto;
+        background-size: 100%;
+        border-radius: 100%;
+        background-color: $accent;
+        animation: 500ms ease-in 0s 1 slidein;
+        border: 5px solid $background;
+    }
 }
 
 .header {
     postion: relative;
     display: block;
+    margin: auto;
     margin-top: 140px;
     padding-bottom: 50px;
     margin-bottom: 50px;
     border-bottom: 0px solid #f0f0f0;
     text-align: center;
+    > h1,h2,h3 {
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 0.25em;
+        padding: 0.25em;
+    }
 }
 
 .quote {
-    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.2;
 }
 
 .article_split {

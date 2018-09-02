@@ -2,7 +2,7 @@
 base_url = "http://code.liquidthink.net"
 
 title = "Alan Turing"
-description="Where I explain anything I find interesting"
+description="\"*to develop the skill of correct thinking is in the first place to learn what you have to disregard. In order to go on, you have to know what to leave out: this is the essence of effective thinking.*\" \n -Kurt Gödel"
 default_language = "en"
 
 highlight_theme = "base16-ocean-dark"
@@ -21,6 +21,7 @@ build_search_index = true
 
 [extra]
 # theme options, (Submit an issue if any social network you may want is missing here: https://github.com/InsidiousMind/Ergo/issues)
+profile = "profile.svg" # the name of the profile picture in static/img/
 website = "liquidthink.net"
 github = "InsidiousMind"
 twitter = "liquid_think"
