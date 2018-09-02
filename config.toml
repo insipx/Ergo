@@ -20,10 +20,11 @@ highlight_code = true
 build_search_index = true
 
 [extra]
-# theme options, (leave them off if you don't want them, they won't render)
-website = "https://liquidthink.net"
-github = "https://github.com/InsidiousMind"
-twitter = "https://twitter.com/liquid_think"
-linkedin = ""
+# theme options, (Submit an issue if any social network you may want is missing here: https://github.com/InsidiousMind/Ergo/issues)
+website = "liquidthink.net"
+github = "InsidiousMind"
+twitter = "liquid_think"
+# linkedin = ""
 email = "aplaza@liquidthink.net"
-# Put all your custom variables here
+# instagram = ""
+# youtube = ""

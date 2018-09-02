@@ -26,10 +26,11 @@
 @import 'menu';
 @import 'vars';
 
-body {
+html, body {
     background-color: $background;
     font-family: 'Montserrat', 'Raleway', sans-serif;
     font-weight: 400;
+    z-index: 50;
 }
 
 h1,h2,h3,h4,h5,h6 { // Choosing a font is hard...
@@ -230,13 +231,17 @@ nav.pagination {
     padding-top: 45px;
     margin-top: 75px;
     display: block;
+    z-index: 100;
+    position: relative;
     > span.prev {
         display: block;
         float: left;
+        z-index: 100;
     }
     > span.next {
         display:block;
         float: right;
+        z-index: 100;
     }
 }
 

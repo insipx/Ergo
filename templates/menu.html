@@ -1,16 +1,42 @@
 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
 <label for="openSidebarMenu" class="sidebarIconToggle">
-  <div class="spinner diagonal part-1"></div>
-  <div class="spinner horizontal"></div>
-  <div class="spinner diagonal part-2"></div>
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
 </label>
 <div id="sidebarMenu">
+    <div class="menu_wrapper">
     <ul class="sidebarMenuInner">
-    <li>{% block side_name %} {{config.title}} {% endblock side_name %}</li>
-    <li><a href="https://vanila.io" target="_blank">Company</a></li>
-    <li><a href="https://instagram.com/plavookac" target="_blank">Instagram</a></li>
-    <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
-    <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
-    <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
-  </ul>
+        <li>
+            {% block side_name %} {{config.title}} {% endblock side_name %}
+            <div class="menu_div" ></div>
+        </li>
+        {% block social_media %}
+        {% if config.extra.website %}
+        <li><a href="http://{{config.extra.website}}" target="_blank">{{config.extra.website}}</a></li>
+        {% endif %}
+        {% if config.extra.github %}
+        <li><a href="{{config.extra.github}}" target="_blank" >{{config.extra.github}}</a><i class="fab fa-github" ></i></li>
+        {% endif %}
+        {% if config.extra.twitter %}
+        <li><a href="https://twitter.com/{{config.extra.twitter}}" target="_blank">@{{config.extra.twitter}}</a><i class="fab fa-twitter" ></i></li>
+        {% endif %}
+        {% if config.extra.instagram %}
+        <li><a href="https://instagram.com/{{config.extra.instagram}}"  target="_blank">{{config.extra.instagram}}</a><i class="fab fa-instagram" ></i></li>
+        {% endif %}
+        {% if config.extra.youtube %}
+        <li><a href="https://youtube.com/channel/{{config.extra.youtube}}" target="_blank" >{{config.extra.youtube}}<i class="fab fa-youtube" ></i></a></li>
+        {% endif %}
+        {% if config.extra.linkedin %}
+        <li><a href="https://www.linkedin.com/in/{{config.extra.linkedin}}" target="_blank">{{config.extra.linkedin}}</a><i class="fab fa-linkedin" ></i></li>
+        {% endif %}
+        {% if config.extra.email %}
+        <li><a href="mailto:{{config.extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
+        {% endif %}
+        {% if config.generate_rss %}
+        <li><a href="{{config.base_url}}/rss.xml" target ="_blank">rss</a><i class="fas fa-rss" ></i></li>
+        {% endif %}
+        {% endblock social_media %}
+    </ul>
+    </div>
 </div>
