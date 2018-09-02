@@ -170,9 +170,10 @@ pre {
     font-style: bold;
     list-style-type: none;
     margin: 0 auto;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin-top: -3px;
+    margin-bottom: 10px;
     font-size: 14px;
+    font-weight: 700;
     font-family: 'Raleway', sans-serif;
     > li {
         display: inline;
@@ -229,7 +230,6 @@ h1.article_title {
     margin: 0 auto;
     font-size: 38px;
     line-height: 42px;
-    margin-bottom: 15px;
     margin-top: 0px;
     font-weight: 700;
 }
