@@ -25,6 +25,7 @@
 
 @import 'menu';
 @import 'vars';
+@import 'macros';
 
 html, body {
     background-color: $background;
@@ -84,7 +85,7 @@ p {
     border: 5px solid $accent;
     border-radius: 100%;
     margin: 0 auto;
-    transition: all 0.5s ease-in-out;
+    // transition: all 250ms ease-in-out;
     > a {
         width: 115px;
         height: 115px;
@@ -93,9 +94,19 @@ p {
         background-size: 100%;
         border-radius: 100%;
         background-color: $accent;
-        animation: 500ms ease-in 0s 1 slidein;
+        animation: 250ms ease-in 0s 1 slidein;
         border: 5px solid $background;
     }
+}
+
+.overlord {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
 }
 
 .header {
@@ -238,16 +249,15 @@ h1.article_title {
     margin: 0;
 }
 
-.user_foot {
-    width: 30px;
-    height: 30px;
-    display: block;
-    background-color: transparent;
-    border: 2px solid $outline;
-    border-radius: 100%;
-    margin-top:2em;
-    margin-left: 2.5em;
-    float: left;
+.foot_list {
+    float: right;
+    margin-right: 1.5em;
+    z-index: 100;
+}
+
+.header_list {
+    margin: auto;
+    margin-top: 2em;
 }
 
 nav.pagination {
@@ -272,7 +282,38 @@ nav.pagination {
     }
 }
 
-a.small {
+.post_container {
+    margin: 0;
+    margin-top: 130px;
+    padding: 0;
+    display: block;
+    position: relative;
+    > article {
+        margin-bottom: 30px;
+        position: relative;
+        display: inherit;
+    }
+}
+
+.frontmatter_page {
+    opacity: 0.3;
+    transition: opacity 0.35 ease-in-out 2s;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.extra_small {
+    font-size: 14px;
+    padding: 0px;
+    display: inline-block;
+    line-height: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 15px;
+}
+
+.small {
     font-size: 17px;
     padding: 0px;
     display: inline-block;
@@ -282,7 +323,7 @@ a.small {
     border-radius: 20px;
 }
 
-a.medium {
+.medium {
     font-size: 17px;
     padding: 0px;
     line-height: 35px;
@@ -292,12 +333,12 @@ a.medium {
     border-radius: 30px;
 }
 
-a.font_faint {
+.font_faint {
     font-weight: 100;
 }
 
-a.button {
-    font-weight: 300;
+.button {
+    font-weight: 400;
     text-transform: lowercase;
     background-color: transparent;
     color: $text;
@@ -306,9 +347,8 @@ a.button {
     transition: all 0.35s ease-in-out;
 }
 
-a.button:hover {
+.button:hover {
     background-color: $accent;
     color: $background;
     border: 1px solid $accent;
-    font-weight: unset;
 }

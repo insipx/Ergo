@@ -1,9 +1,22 @@
-<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-<label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
+<!-- <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"> -->
+<!-- openSidebarMenu -->
+<!-- <label for="openSidebarMenu" class="sidebarIconToggle"> -->
+<!-- <div class="spinner diagonal part-1"></div> -->
+<!-- <div class="spinner horizontal"></div> -->
+<!-- <div class="spinner diagonal part-2"></div> -->
+<!-- </label> -->
+<!-- <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"> -->
+
+<label class="menu cross menu--1">
+    <input type="checkbox" id="menu_icon">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="30" />
+        <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+        <path class="line--2" d="M0 50h70" />
+        <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+    </svg>
 </label>
+
 <div id="sidebarMenu">
     <div class="menu_wrapper">
     <ul class="sidebarMenuInner">
@@ -16,7 +29,7 @@
         <li><a href="http://{{config.extra.website}}" target="_blank">{{config.extra.website}}</a></li>
         {% endif %}
         {% if config.extra.github %}
-        <li><a href="{{config.extra.github}}" target="_blank" >{{config.extra.github}}</a><i class="fab fa-github" ></i></li>
+        <li><a href="https://github.com/{{config.extra.github}}" target="_blank" >{{config.extra.github}}</a><i class="fab fa-github" ></i></li>
         {% endif %}
         {% if config.extra.twitter %}
         <li><a href="https://twitter.com/{{config.extra.twitter}}" target="_blank">@{{config.extra.twitter}}</a><i class="fab fa-twitter" ></i></li>

@@ -1,0 +1,6 @@
+{% block footer %}
+<footer>
+    {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
+    {{ macros::social_list(classes="foot_list", bsize="extra_small", extra=config.extra, siteurl=config.base_url)}}
+</footer>
+{% endblock footer %}

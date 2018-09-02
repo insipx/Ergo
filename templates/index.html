@@ -1,31 +1,18 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-        <!-- SEO -->
-        <title>{% block title %} {{ config.title }} {% endblock title %}</title>
-
-        <!-- Enable responsiveness on mobile devices-->
-        <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1" >
-
-        <!--  css -->
-        <link rel="stylesheet"  href="/ergo.css" >
-
-        <!-- fonts -->
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    </head>
+    {% include "head.html" %}
     <body>
         {% include "menu.html" %}
         <header class="header">
+            {% block header %}
             <figure class="user_logo">
-                {% block profile %} <a href="{{config.base_url}}" style="background-image: url({{config.base_url}}/img/{{config.extra.profile}}"></a> {% endblock profile %}
+                <a href="{{config.base_url}}" style="background-image: url({{config.base_url}}/img/{{config.extra.profile}}"></a>
             </figure>
-            <h2>{% block name %} {{config.title}} {% endblock name %}</h2>
-            <h3 class="quote">{% block description %} {{config.description | markdown(inline=true)}} {% endblock description %}</h3>
+            <h2>{{config.title}}</h2>
+            <h3 class="quote">{{config.description | markdown(inline=true)}}</h3>
+            {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url) }}
+            {% endblock header %}
         </header>
         <section class="post_list">
             {% block content %}
@@ -35,15 +22,7 @@
                 <h1 class="article_title" >
                     <a href="{{page.permalink}}"  id="article_link" >{{page.title}}</a>
                 </h1>
-                <ul class="frontmatter" id="frontmatter">
-                    <li>
-                        <time class="article_time"  datetime="{{page.date}}">{{ page.date | date(format="%B %d, %Y") }}</time>
-                    </li>
-                    <span class="dotDivider"></span>
-                    <li> {{page.word_count}} words </li>
-                    <span class="dotDivider" ></span>
-                    <li> {{page.reading_time}} min </li>
-                </ul>
+                {{ macros::frontmatter(classes="", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
                 <p class="article_content">
                     {{ page.content | safe | striptags | truncate }}
                 </p>
@@ -62,11 +41,6 @@
             {% endif %}
         </nav>
         {% endblock pagination %}
-        <footer>
-            <figure class="user_foot">
-                <!-- logo here -->
-            </figure>
-            <ul class="foot_links"></ul>
-        </footer>
+        {% include "footer.html" %}
     </body>
 </html>

@@ -1,0 +1,50 @@
+{% macro mini_logo(classes, title, siteurl, logourl) %}
+<figure class="mini_logo {{ classes }}">
+    <a href="{{siteurl}}" style="background-image: url({{siteurl}}/img/{{logourl}})"></a>
+</figure>
+<h5>
+    <a href="{{siteurl}}">{{title}}</a>
+</h5>
+{% endmacro mini_logo %}
+
+<!-- classes=any extra styling, bsize=buttonsize, extra=config.extra, siteurl=config.base_url -->
+{% macro social_list(classes, bsize, extra, siteurl) %}
+<ul class="social_list {{classes}}" >
+    {% if extra.website %}
+    <li class="button {{bsize}} font_faint"><a href="http://{{extra.website}}" target="_blank">{{extra.website}}</a></li>
+    {% endif %}
+    {% if extra.github %}
+    <li class="button {{bsize}} font_faint"><a href="https://github.com/{{extra.github}}" target="_blank" >{{extra.github}}</a><i class="fab fa-github" ></i></li>
+    {% endif %}
+    {% if extra.twitter %}
+    <li class="button {{bsize}} font_faint"><a href="https://twitter.com/{{extra.twitter}}" target="_blank">@{{extra.twitter}}</a><i class="fab fa-twitter" ></i></li>
+    {% endif %}
+    {% if extra.instagram %}
+    <li class="button {{bsize}} font_faint"><a href="https://instagram.com/{{extra.instagram}}"  target="_blank">{{extra.instagram}}</a><i class="fab fa-instagram" ></i></li>
+    {% endif %}
+    {% if extra.youtube %}
+    <li class="button {{bsize}} font_faint"><a href="https://youtube.com/channel/{{extra.youtube}}" target="_blank" >{{extra.youtube}}<i class="fab fa-youtube" ></i></a></li>
+    {% endif %}
+    {% if extra.linkedin %}
+    <li class="button {{bsize}} font_faint"><a href="https://www.linkedin.com/in/{{extra.linkedin}}" target="_blank">{{extra.linkedin}}</a><i class="fab fa-linkedin" ></i></li>
+    {% endif %}
+    {% if extra.email %}
+    <li class="button {{bsize}} font_faint"><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
+    {% endif %}
+    {% if generate_rss %}
+    <li class="button {{bsize}} font_faint"><a href="{{siteurl}}/rss.xml" target ="_blank">rss</a><i class="fas fa-rss" ></i></li>
+    {% endif %}
+</ul>
+{% endmacro social_list %}
+
+{% macro frontmatter(classes, date, word_count, read_time) %}
+<ul class="frontmatter {{classes}}" id="frontmatter">
+    <li>
+        <time class="article_time"  datetime="{{date}}">{{ date | date(format="%B %d, %Y") }}</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> {{word_count}} words </li>
+    <span class="dotDivider" ></span>
+    <li> {{read_time}} min </li>
+</ul>
+{% endmacro frontmatter %}

@@ -1,0 +1,19 @@
+{% import "macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="en">
+    {% include "head.html" %}
+    <body>
+        <nav id="overlord" class="overlord" >
+            {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
+            {% include "menu.html" %}
+        </nav>
+
+        <section class="post_container">
+            <article>
+                {% block post %}
+                {{ macros::frontmatter(classes="", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
+                {% endblock post %}
+            </article>
+        </section>
+    </body>
+</html>

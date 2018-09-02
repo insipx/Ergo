@@ -1,0 +1,46 @@
+@import 'vars';
+
+figure.mini_logo {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: transparent;
+    border: 2px solid $accent;
+    border-radius: 100%;
+    > a {
+        display: block;
+        width: 26px;
+        height: 26px;
+        border-radius: 100%;
+        margin: 0 auto;
+        background-size: 100%;
+        background-color: $accent;
+        border: 2px solid $background;
+        text-decoration: none;
+    }
+}
+
+figure.mini_logo + h5 {
+    float:left;
+    margin: 0;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 40px;
+    > a {
+        text-decoration: none;
+        color: $accent;
+    }
+}
+
+ul.social_list {
+    display: inline-block;
+    float: right;
+    > li {
+        list-style: none;
+        display: inline-block;
+        > a {
+            text-decoration: none;
+        }
+    }
+}
