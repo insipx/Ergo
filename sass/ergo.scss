@@ -1,27 +1,268 @@
 /*
-          _____                    _____                    _____                   _______         
-         /\    \                  /\    \                  /\    \                 /::\    \        
-        /::\    \                /::\    \                /::\    \               /::::\    \       
-       /::::\    \              /::::\    \              /::::\    \             /::::::\    \      
-      /::::::\    \            /::::::\    \            /::::::\    \           /::::::::\    \     
-     /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \         /:::/~~\:::\    \    
-    /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \       /:::/    \:::\    \   
-   /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \     /:::/    / \:::\    \  
-  /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \   /:::/____/   \:::\____\ 
+          _____                    _____                    _____                   _______
+         /\    \                  /\    \                  /\    \                 /::\    \
+        /::\    \                /::\    \                /::\    \               /::::\    \
+       /::::\    \              /::::\    \              /::::\    \             /::::::\    \
+      /::::::\    \            /::::::\    \            /::::::\    \           /::::::::\    \
+     /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \         /:::/~~\:::\    \
+    /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \       /:::/    \:::\    \
+   /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \     /:::/    / \:::\    \
+  /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \   /:::/____/   \:::\____\
  /:::/\:::\   \:::\    \  /:::/\:::\   \:::\____\  /:::/    /   \:::\ ___\ |:::|    |     |:::|    |
 /:::/__\:::\   \:::\____\/:::/  \:::\   \:::|    |/:::/____/  ___\:::|    ||:::|____|     |:::|    |
-\:::\   \:::\   \::/    /\::/   |::::\  /:::|____|\:::\    \ /\  /:::|____| \:::\    \   /:::/    / 
- \:::\   \:::\   \/____/  \/____|:::::\/:::/    /  \:::\    /::\ \::/    /   \:::\    \ /:::/    /  
-  \:::\   \:::\    \            |:::::::::/    /    \:::\   \:::\ \/____/     \:::\    /:::/    /   
-   \:::\   \:::\____\           |::|\::::/    /      \:::\   \:::\____\        \:::\__/:::/    /    
-    \:::\   \::/    /           |::| \::/____/        \:::\  /:::/    /         \::::::::/    /     
-     \:::\   \/____/            |::|  ~|               \:::\/:::/    /           \::::::/    /      
-      \:::\    \                |::|   |                \::::::/    /             \::::/    /       
-       \:::\____\               \::|   |                 \::::/    /               \::/____/        
-        \::/    /                \:|   |                  \::/____/                 ~~              
-         \/____/                  \|___|                                                            
-                                                                                                   
+\:::\   \:::\   \::/    /\::/   |::::\  /:::|____|\:::\    \ /\  /:::|____| \:::\    \   /:::/    /
+ \:::\   \:::\   \/____/  \/____|:::::\/:::/    /  \:::\    /::\ \::/    /   \:::\    \ /:::/    /
+  \:::\   \:::\    \            |:::::::::/    /    \:::\   \:::\ \/____/     \:::\    /:::/    /
+   \:::\   \:::\____\           |::|\::::/    /      \:::\   \:::\____\        \:::\__/:::/    /
+    \:::\   \::/    /           |::| \::/____/        \:::\  /:::/    /         \::::::::/    /
+     \:::\   \/____/            |::|  ~|               \:::\/:::/    /           \::::::/    /
+      \:::\    \                |::|   |                \::::::/    /             \::::/    /
+       \:::\____\               \::|   |                 \::::/    /               \::/____/
+        \::/    /                \:|   |                  \::/____/                 ~~
+         \/____/                  \|___|
+
 */
 
+@import 'menu';
+@import 'vars';
+
+body {
+    background-color: $background;
+    font-family: 'Montserrat', 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6 { // Choosing a font is hard...
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1;
+    color: $title;
+}
+
+h1 {
+
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: $accent;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+    font-size: 1em;
+    color: $text;
+    line-height: 1.7;
+}
+
+.user_logo {
+    width: 125px;
+    height: 125px;
+    display: block;
+    background-color: transparent;
+    border: 5px solid $accent;
+    border-radius: 100%;
+    margin: 0 auto;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.header {
+    postion: relative;
+    display: block;
+    margin-top: 140px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 0px solid #f0f0f0;
+    text-align: center;
+}
+
+.quote {
+    font-style: italic;
+}
+
+.article_split {
+    width: auto;
+    max-width: 100%;
+    height: 1px;
+    background-color: $background;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    display: block;
+    clear: both;
+}
+
+.frontmatter {
+    display: block;
+    font-size: 1em;
+    padding-left: 0;
+    color: $title;
+    font-style: bold;
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    > li {
+        display: inline;
+    }
+    > span {
+        display: inline;
+    }
+    display: block;
+    opacity: 0;
+}
 
 
+.dotDivider {
+    padding-right: .3em;
+    padding-left: .3em;
+    font-size: 16px;
+    white-space: nowrap;
+    font-weight: 400;
+    display: inline;
+}
+
+.dotDivider::after {
+    content: '\00B7';
+}
+
+.post_list {
+    padding-bottom: 30px;
+    display: block;
+    position: relative;
+    > article {
+        display: block;
+    }
+}
+
+a#article_link, a#article_link:visited {
+    text-decoration: none;
+    color: $title;
+}
+a#article_link:hover {
+    color: $accent;
+    transition-property: all;
+    transition-duration: 0.35s;
+}
+
+h1.article_title:hover + ul#frontmatter {
+    opacity:1;
+    transition-property: all;
+    transition-duration: 0.70s;
+}
+
+h1.article_title {
+    color: $title;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 40px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.post_list_item {
+    display: block;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 4em;
+    > ul {
+        max-width: 600px;
+    }
+    > a {
+        max-width: 600px;
+    }
+    > p {
+        max-width: 600px;
+        display: block;
+        margin: auto;
+        color: $text;
+    }
+    > h1,h2,h3,h4,h5,h6 {
+        max-width: 600px
+    }
+}
+
+.foot_links {
+    clear: both;
+    display: block;
+    float: right;
+    margin-top: 2.5em;
+    margin-right: 2em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user_foot {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: transparent;
+    border: 2px solid $outline;
+    border-radius: 100%;
+    margin-top:2em;
+    margin-left: 2.5em;
+    float: left;
+}
+
+nav.pagination {
+    padding: 25px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    border-top: 1px solid $accent2;
+    padding-top: 45px;
+    margin-top: 75px;
+    display: block;
+    > span.prev {
+        display: block;
+        float: left;
+    }
+    > span.next {
+        display:block;
+        float: right;
+    }
+}
+
+a.button {
+    padding: 0px;
+    font-size: 17px;
+    line-height: 35px;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    font-weight: 100;
+    text-transform: lowercase;
+    background-color: transparent;
+    color: $text;
+    border: 1px solid $outline;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.35s;
+}
+
+a.button:hover {
+    background-color: $accent;
+    color: $background;
+    border: 1px solid $accent;
+    font-weight: normal;
+}

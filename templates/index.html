@@ -4,19 +4,66 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" >
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-        <! -- Enable responsiveness on mobile devices-->
-        <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+        <!-- SEO -->
         <title>{% block title %} {{ config.title }} {% endblock title %}</title>
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+        <!--  css -->
+        <link rel="stylesheet"  href="/ergo.css" >
+
+        <!-- fonts -->
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-            Header!
+        {% include "menu.html" %}
+        <header class="header">
+            <figure class="user_logo">
+                <!-- put the logo here -->
+            </figure>
+            <h2>{% block name %} {{config.title}} {% endblock name %}</h2>
+            <h3 class="quote">{% block description %} {{config.description}} {% endblock description %}</h3>
         </header>
-        <section>
-            Section!
+        <section class="post_list">
+            {% block content %}
+            <!-- <p>{{__tera_context}}</p> -->
+                {% for page in paginator.pages %}
+            <article id="{{page.title}}" class="post_list_item">
+                <h1 class="article_title" >
+                    <a href="{{page.permalink}}"  id="article_link" >{{page.title}}</a>
+                </h1>
+                <ul class="frontmatter" id="frontmatter">
+                    <li>
+                        <time class="article_time"  datetime="{{page.date}}">{{ page.date | date(format="%B %d, %Y") }}</time>
+                    </li>
+                    <span class="dotDivider"></span>
+                    <li> {{page.word_count}} words </li>
+                    <span class="dotDivider" ></span>
+                    <li> {{page.reading_time}} min </li>
+                </ul>
+                <p class="article_content">
+                    {{ page.content | safe | striptags | truncate }}
+                </p>
+            </article>
+            {% endfor %}
+                <nav class="pagination">
+                    {% if paginator.previous %}
+                    <span class="prev" ><a rel="prev" href="{{paginator.previous}}" class="button">← prev</a></span>
+                    {% endif %}
+                    {% if paginator.next %}
+                    <span class="next" ><a rel="next" href="{{paginator.next}}" class="button">next →</a></span>
+                    {% endif %}
+                </nav>
+            {% endblock content %}
         </section>
         <footer>
-            Footer!
+            <figure class="user_foot">
+                <!-- logo here -->
+            </figure>
+            <ul class="foot_links"></ul>
         </footer>
     </body>
 </html>

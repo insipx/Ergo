@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "http://code.liquidthink.net"
 
-title = "code.liquid_think"
+title = "Alan Turing"
 description="Where I explain anything I find interesting"
 default_language = "en"
 
@@ -20,4 +20,10 @@ highlight_code = true
 build_search_index = true
 
 [extra]
+# theme options, (leave them off if you don't want them, they won't render)
+website = "https://liquidthink.net"
+github = "https://github.com/InsidiousMind"
+twitter = "https://twitter.com/liquid_think"
+linkedin = ""
+email = "aplaza@liquidthink.net"
 # Put all your custom variables here
