@@ -1,5 +1,5 @@
 name = "Ergo"
-description = "A Simple Blog Theme focused on Writing, inspired by svbtle"
+description = "A simple blog Theme focused on writing, inspired by svbtle"
 license = "MIT"
 homepage = "https://github.com/InsidiousMind/Ergo"
 min_version = "0.4.1"
@@ -7,4 +7,4 @@ demo = "https://ergo.liquidthink.net"
 
 [author]
 name = "Andrew Plaza"
-homepage = "https://liquidthink.net"
+homepage = "https://code.liquidthink.net"
