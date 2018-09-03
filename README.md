@@ -13,11 +13,6 @@ This is not meant as a svbtle clone.
 
 WIP: Screencast of the entire creation process of ergo.
 
-##  features
-- NoJS. I'm not actually sure if this is really a feature, but I was surprised what I was able to accomplish with just CSS3.
-- Fonts that are easy on the eyes
-- easy theme customization (sass/colors.scss for all site colors)
-
 ## Installation
 Get [Gutenberg](https://www.getgutenberg.io/) and/or follow their guide on [installing a theme](https://www.getgutenberg.io/documentation/themes/installing-and-using-themes/).
 Make sure to add `theme = "ergo"` to your `config.toml`
