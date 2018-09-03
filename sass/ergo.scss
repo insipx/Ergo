@@ -99,6 +99,23 @@ hr {
     opacity: 0.4;
 }
 
+article {
+    a {
+        border-bottom: 2px solid $outline;
+        color: $text;
+    }
+    a:link {
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 0.35s;
+    }
+    a:hover {
+        outline: 0;
+        border-bottom: 2px solid $accent;
+        opacity: 1;
+    }
+}
+
 details {
     &:hover {
         cursor:pointer;
@@ -289,7 +306,9 @@ h1.article_title {
     line-height: 42px;
     margin-top: 0px;
     font-weight: 700;
-
+    > a {
+        border-bottom: unset;
+    }
     > a:focus {
         outline: none;
     }
