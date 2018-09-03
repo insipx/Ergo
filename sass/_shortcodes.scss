@@ -1,0 +1,15 @@
+// SCSS for ergo shortcodes
+
+.youtube {
+    > iframe {
+        width: 600px;
+        height: 340px;
+    }
+}
+
+.vimeo {
+    > iframe {
+        width: 600px;
+        height: 340px;
+    }
+}

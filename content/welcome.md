@@ -69,8 +69,54 @@ markdown file right before the code block.  (Meta, right?)
 
 If we want, we can also `specify inline code` which is useful for `the small stuff`.
 
-# Horizontal rules
+## Horizontal rules
 
 We have them!
 
 ---
+
+## BlockQuotes
+{% quote(author="Noam Chomsky") %}Language is a process of free creation; its laws and principles are fixed, but the manner in which the principles of generation are used is free and infinitely varied. Even the interpretation and use of words involves a process of free creation.
+{% end %}
+
+## Youtube
+
+with `yt(id="the_id_here")`
+{{ yt(id="nhS71NrmfTw") }}
+
+## Vimeo
+with `vm(id="id_here")`
+{{ vm(id="115189988") }}
+
+## Links
+
+[Of Course](https://ergo.liquidthink.net)
+
+## Tables
+You can make tables in markdown, too!  Who would have thought.  Are these styled yet?
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+## Foldable Text
+
+<details>
+    <summary>Title 1</summary>
+    <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+</details>
+
+<details>
+    <summary>Title 2</summary>
+    <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
+</details>
+
+We can do that like this:
+
+```html
+<details>
+    <summary>Title 1</summary>
+    <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+</details>
+```

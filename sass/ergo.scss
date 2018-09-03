@@ -26,6 +26,7 @@
 @import 'menu';
 @import 'vars';
 @import 'macros';
+@import 'shortcodes';
 
 html, body {
     background-color: $background;
@@ -80,6 +81,57 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+}
+
+blockquote {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    border-left: 8px solid $accent;
+    color: $text;
+}
+
+hr {
+    color: $text;
+    opacity: 0.4;
+}
+
+details {
+    &:hover {
+        cursor:pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+    &[open] summary ~ * {
+        animation: sweep 400ms ease-in-out;
+        outline: none;
+    }
+}
+
+
+table, th, td {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid $text;
+    padding: 0.33em;
+}
+
+th, td {
+    margin: auto;
+}
+
+tr {
+    text-align: center;
+    vertical-align: middle;
+}
+
+@keyframes sweep {
+    0% {opacity: 0; margin-left: -10px;}
+    100% {opacity: 1; margin-left: 0px;}
 }
 
 @keyframes slidein {
