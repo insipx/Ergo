@@ -10,11 +10,11 @@
   </figure>
   <h2 class="site_title">{{config.title}}</h2>
   <div>{{config.description | markdown(inline=true)}}</div>
-  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url) }}
+  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url, rss=config.generate_rss) }}
   {% endblock header %}
 </header>
 
-<section class="post_list"> 
+<section class="post_list">
     {% for page in paginator.pages %}
       <article id="{{page.title}}" class="post_list_item">
         <h1 class="article_title" >
@@ -22,7 +22,7 @@
         </h1>
           {% if page.date %}
             {{ macros::frontmatter(classes="", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
-          {% else %} 
+          {% else %}
             {{ macros::frontmatter(classes="", date="", word_count=page.word_count, read_time=page.reading_time) }}
           {% endif %}
         <p class="article_content">{{ page.content | safe | striptags | truncate }}</p>
@@ -39,10 +39,9 @@
     {% if paginator.previous %}
       <span class="prev" ><a rel="prev" href="{{paginator.previous}}" class="button medium font_faint">← prev</a></span>
     {% endif %}
-    
+
     {% if paginator.next %}
       <span class="next" ><a rel="next" href="{{paginator.next}}" class="button medium font_faint">next →</a></span>
     {% endif %}
   </nav>
 {% endblock pagination %}
-

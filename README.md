@@ -1,6 +1,6 @@
 [ergo](http://ergo.liquidthink.net)
 
-![Ergo Screenshot](https://i.imgur.com/XpnB62e.png)
+![Ergo Screenshot](https://i.imgur.com/0Ni3swd.png)
 
 A light, simple & beautiful Gutenberg theme made with a focus on writing. Inspired by sbvtle and Pixyll.
 

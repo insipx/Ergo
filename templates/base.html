@@ -27,16 +27,16 @@
 
     <body>
       {% block menu %}
-        {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra) }}
+        {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra, rss=config.generate_rss) }}
       {% endblock menu %}
-        
+
       {% block content %} {% endblock content %}
       {% block pagination %} {% endblock pagination %}
 
       <footer>
         {% block footer %}
           {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
-          {{ macros::social_list(classes="foot_list", bsize="extra_small", extra=config.extra, siteurl=config.base_url) }}
+          {{ macros::social_list(classes="foot_list", bsize="extra_small", extra=config.extra, siteurl=config.base_url, rss=config.generate_rss) }}
         {% endblock footer %}
       </footer>
     </body>
