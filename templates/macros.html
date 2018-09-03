@@ -1,3 +1,34 @@
+{% macro head(title) %}
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- SEO -->
+    <title> {{ title }} </title>
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+    <!--  css -->
+    <link rel="stylesheet"  href="/ergo.css" >
+
+    <!-- fonts -->
+    <!-- preload  -->
+    <link rel="preload" href= href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
+    <link rel="preload"  href= "https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" as="style" >
+    <!-- load -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+{% endmacro head %}
+
+{% macro footer(title, siteurl, extra) %}
+<footer>
+    {{ macros::mini_logo(classes="", title=title, siteurl=siteurl, logourl=extra.profile) }}
+    {{ macros::social_list(classes="foot_list", bsize="extra_small", extra=extra, siteurl=siteurl) }}
+</footer>
+{% endmacro footer %}
+
 {% macro mini_logo(classes, title, siteurl, logourl) %}
 <figure class="mini_logo {{ classes }}">
     <a href="{{siteurl}}" style="background-image: url({{siteurl}}/img/{{logourl}})"></a>
@@ -48,3 +79,50 @@
     <li> {{read_time}} min </li>
 </ul>
 {% endmacro frontmatter %}
+
+{% macro menu(title, siteurl, extra) %}
+<input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
+<label class="menu cross menu--1" for="openSidebarMenu">
+    <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="30" />
+        <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+        <path class="line--2" d="M0 50h70" />
+        <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+    </svg>
+</label>
+
+<div id="sidebarMenu">
+    <div class="menu_wrapper">
+        <ul class="sidebarMenuInner">
+            <li>
+                <a href="{{siteurl}}" >{{title}}</a>
+                <div class="menu_div" ></div>
+            </li>
+            {% if extra.website %}
+            <li><a href="https://{{extra.website}}" target="_blank">{{extra.website}}</a></li>
+            {% endif %}
+            {% if extra.github %}
+            <li><a href="https://github.com/{{extra.github}}" target="_blank" >{{extra.github}}</a><i class="fab fa-github" ></i></li>
+            {% endif %}
+            {% if extra.twitter %}
+            <li><a href="https://twitter.com/{{extra.twitter}}" target="_blank">@{{extra.twitter}}</a><i class="fab fa-twitter" ></i></li>
+            {% endif %}
+            {% if extra.instagram %}
+            <li><a href="https://instagram.com/{{extra.instagram}}"  target="_blank">{{extra.instagram}}</a><i class="fab fa-instagram" ></i></li>
+            {% endif %}
+            {% if extra.youtube %}
+            <li><a href="https://youtube.com/channel/{{extra.youtube}}" target="_blank" >{{extra.youtube}}<i class="fab fa-youtube" ></i></a></li>
+            {% endif %}
+            {% if extra.linkedin %}
+            <li><a href="https://www.linkedin.com/in/{{extra.linkedin}}" target="_blank">{{extra.linkedin}}</a><i class="fab fa-linkedin" ></i></li>
+            {% endif %}
+            {% if extra.email %}
+            <li><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
+            {% endif %}
+            {% if generate_rss %}
+            <li><a href="{{base_url}}/rss.xml" target ="_blank">rss</a><i class="fas fa-rss" ></i></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{% endmacro menu %}

@@ -1,9 +1,9 @@
 {% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
-    {% include "head.html" %}
+    {{ macros::head(title=config.title) }}
     <body>
-        {% include "menu.html" %}
+        {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra) }}
         <header class="header">
             {% block header %}
             <figure class="user_logo">
@@ -41,6 +41,8 @@
             {% endif %}
         </nav>
         {% endblock pagination %}
-        {% include "footer.html" %}
+        {% block footer %}
+        {{ macros::footer(title=config.title, siteurl=config.base_url, extra=config.extra) }}
+        {% endblock footer %}
     </body>
 </html>

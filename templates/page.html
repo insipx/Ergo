@@ -1,11 +1,11 @@
 {% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
-    {% include "head.html" %}
+    {{ macros::head(title=config.title)}}
     <body>
         <nav id="overlord" class="overlord" >
             {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
-            {% include "menu.html" %}
+            {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra) }}
         </nav>
 
         <section class="post_container">
@@ -18,6 +18,6 @@
 
             </article>
         </section>
-        {% include "footer.html" %}
+        {{ macros::footer(title=config.title,siteurl=config.base_url,extra=config.extra) }}
     </body>
 </html>
