@@ -1,23 +1,20 @@
+{% extends "base.html" %}
 {% import "macros.html" as macros %}
-<!DOCTYPE html>
-<html lang="en">
-    {{ macros::head(title=config.title)}}
-    <body>
-        <nav id="overlord" class="overlord" >
-            {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
-            {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra) }}
-        </nav>
 
-        <section class="post_container">
-            <article>
-                {% block post %}
-                <h1 class="article_title"><a href="{{page.permalink}}" id="article_link">{{page.title}}</a></h1>
-                {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
-                {{ page.content | safe }}
-                {% endblock post %}
+{% block content %}
+<nav id="overlord" class="overlord" >
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
+  {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra) }}
+</nav>
 
-            </article>
-        </section>
-        {{ macros::footer(title=config.title,siteurl=config.base_url,extra=config.extra) }}
-    </body>
-</html>
+<section class="post_container">
+  <article>
+    {% block post %}
+      <h1 class="article_title"><a href="{{page.permalink}}" id="article_link">{{ page.title }}</a></h1>
+      {{ macros::frontmatter(classes="frontmatter_page", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
+      {{ page.content | safe }}
+      {% endblock post %}
+  </article>
+</section>
+{% endblock content %}
+
