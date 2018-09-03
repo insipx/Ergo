@@ -1,5 +1,5 @@
 +++
-title = "Welcome to Ergo, a sbvtle inspired theme"
+title = "Welcome to Ergo, a svbtle inspired theme"
 date = 2018-08-31
 category = "test"
 +++
