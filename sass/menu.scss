@@ -147,6 +147,7 @@ path {
   @media screen and (max-width: 750px) { // if screen is too small, don't let the menu drag when trying to read text
       position: absolute;
   }
+  user-select: none;
 }
 
 // 750 pixels position = absolute
