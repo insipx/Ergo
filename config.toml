@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://code.liquidthink.net"
+base_url = "https://ergo.liquidthink.net"
 
 title = "Alan Turing"
 # a description; you can use markdown here if you like
