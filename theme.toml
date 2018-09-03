@@ -3,7 +3,7 @@ description = "A Simple Blog Theme focused on Writing, inspired by svbtle"
 license = "MIT"
 homepage = "https://github.com/InsidiousMind/Ergo"
 min_version = "0.4.0"
-demo = ""
+demo = "https://ergo.liquidthink.net"
 
 [author]
 name = "Andrew Plaza"
