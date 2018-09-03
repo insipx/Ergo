@@ -58,6 +58,7 @@ youtube = "${your_youtube_channel_id}"
 ```
 
 ## Features
+  - [x] Pagination
   - [ ] Dynamic Color Schemes
   - [ ] Edit Colors in `config.toml`
   - [x] NoJS
