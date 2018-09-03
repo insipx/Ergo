@@ -5,7 +5,7 @@
 A light, simple & beautiful Gutenberg theme made with a focus on writing. Inspired by sbvtle and Pixyll.
 
 Like both those web designs, Ergo is a theme that emphasizes content, but still tries to be stylish. Frankly, the design is
-most like sbvtle (http://sbvtle.com) but without the Javascript, community or kudos button (kudos is on the list of additions, though! But then i'll have to use JS...)
+most like sbvtle (http://sbvtle.com) but without the clever svbtle Engine, Javascript, community or kudos button (kudos is on the list of additions, though! But then i'll have to use JS...)
 If you find that you like all those things, please check out [svbtle](http://svbtle.com); this theme is meant as a lighter (free) alternative,
 and ergo's design will most likely diverge more in the future as this theme evolves with me and it's users (if there are any).
 This is not meant as a svbtle clone.
