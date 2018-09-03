@@ -21,7 +21,7 @@
     <div class="menu_wrapper">
         <ul class="sidebarMenuInner">
             <li>
-                {% block side_name %} {{config.title}} {% endblock side_name %}
+                {% block side_name %} <a href="{{config.base_url}}" >{{config.title}}</a>{% endblock side_name %}
                 <div class="menu_div" ></div>
             </li>
             {% block social_media %}

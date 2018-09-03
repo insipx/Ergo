@@ -71,6 +71,12 @@
     text-align: right;
     margin-right: 10px;
     font-weight: bold;
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $title;
+        text-transform:unset;
+    }
 }
 
 .menu_div {
@@ -112,12 +118,14 @@ label {
   height: 25vw;
   max-width: 75px;
   max-height: 75px;
+  @include disable-select;
 }
 
 @media (min-aspect-ratio: 1/1) {
   label {
     width: 25vh;
     height: 25vh;
+    @include disable-select;
   }
 }
 
@@ -148,7 +156,7 @@ path {
   @media screen and (max-width: 750px) { // if screen is too small, don't let the menu drag when trying to read text
       position: absolute;
   }
-  user-select: none;
+  @include disable-select;
 }
 
 // 750 pixels position = absolute
