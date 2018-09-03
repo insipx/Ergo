@@ -1,3 +1,4 @@
+@import 'colors';
 @import 'vars';
 
 #sidebarMenu {
@@ -10,6 +11,11 @@
     transition: transform 150ms ease-in-out;
     z-index: 90;
 }
+
+#sidebarMenu:focus, input:focus {
+    outline: none;
+}
+
 .menu_wrapper {
     position: inherit;
     width: 100%;

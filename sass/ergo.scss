@@ -22,7 +22,7 @@
          \/____/                  \|___|
 
 */
-
+@import 'colors';
 @import 'menu';
 @import 'vars';
 @import 'macros';
@@ -187,7 +187,7 @@ pre {
         display: inline;
     }
     display: block;
-    opacity: 0;
+    opacity: 0.3;
     transition: opacity 0.70s ease-out 1.7s;
 }
 
@@ -237,6 +237,10 @@ h1.article_title {
     line-height: 42px;
     margin-top: 0px;
     font-weight: 700;
+
+    > a:focus {
+        outline: none;
+    }
 }
 
 .post_list_item {

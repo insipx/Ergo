@@ -3,10 +3,10 @@ base_url = "https://ergo.liquidthink.net"
 
 title = "Alan Turing"
 # a description; you can use markdown here if you like
-description="\"*to develop the skill of correct thinking is in the first place to learn what you have to disregard. In order to go on, you have to know what to leave out: this is the essence of effective thinking.*\" \n -Kurt Gödel"
+description="\"*to develop the skill of correct thinking is in the first place to learn what you have to disregard. In order to go on, you have to know what to leave out.*\" \n -Kurt Gödel"
 default_language = "en"
 
-highlight_theme = "base16-ocean-dark"
+highlight_theme = "solarized-light"
 generate_rss = true
 rss_limit = 20
 
@@ -18,7 +18,7 @@ compile_sass = true
 highlight_code = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+build_search_index = false
 
 [extra]
 # theme options, (Submit an issue if any social network you may want is missing here: https://github.com/InsidiousMind/Ergo/issues)
