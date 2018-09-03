@@ -10,6 +10,8 @@ If you find that you like all those things, please check out [svbtle](http://svb
 and ergo's design will most likely diverge more in the future as this theme evolves with me and it's users (if there are any).
 This is not meant as a svbtle clone.
 
+
+Here's a timelapse:
 [![Ergo Creation Timelapse](https://img.youtube.com/vi/ogEjvM-v_-s/0.jpg)](https://www.youtube.com/watch?v=ogEjvM-v_-s)
 
 
