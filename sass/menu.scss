@@ -17,6 +17,7 @@
     background: $background;
     z-index: 90;
     padding-top: 5em;
+    box-shadow: -0.10em 0 1em $outline, 1em 1em 1em 0 rgba(0,0,0,0.19);
 }
 .sidebarMenuInner{
     position: inherit;
