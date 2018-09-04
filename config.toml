@@ -23,7 +23,7 @@ build_search_index = false
 [extra]
 # theme options, (Submit an issue if any social network you may want is missing here: https://github.com/InsidiousMind/Ergo/issues)
 profile = "profile.svg" # the name of the profile picture in static/img/
-website = "code.liquidthink.net"
+website = "liquidthink.net"
 github = "InsidiousMind"
 twitter = "liquid_think"
 # linkedin = ""
