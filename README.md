@@ -2,7 +2,7 @@
 
 ![Ergo Screenshot](https://i.imgur.com/l182IYg.jpg)
 
-A light, simple & beautiful Gutenberg theme made with a focus on writing. Inspired by sbvtle and Pixyll.
+A light, simple & beautiful Zola theme made with a focus on writing. Inspired by sbvtle and Pixyll.
 
 Like both those web designs, Ergo is a theme that emphasizes content, but still tries to be stylish. Frankly, the design is
 most like sbvtle (http://sbvtle.com) but without the clever svbtle Engine, Javascript, community or kudos button (kudos is on the list of additions, though! But then i'll have to use JS...)
@@ -16,17 +16,17 @@ Here's a timelapse:
 
 
 ## Installation
-Get [Gutenberg](https://www.getgutenberg.io/) and/or follow their guide on [installing a theme](https://www.getgutenberg.io/documentation/themes/installing-and-using-themes/).
+Get [Zola](https://www.getzola.org/) and/or follow their guide on [installing a theme](https://www.getzola.org/documentation/themes/installing-and-using-themes/).
 Make sure to add `theme = "ergo"` to your `config.toml`
 
-#### Check gutenberg version (only 0.4.1+)
+#### Check zola version (only 0.4.1+)
 Just to double-check to make sure you have the right version. It is not supported to use this theme with a version under 0.4.1.
 
 ### how to serve
-go into your sites directory, and type `gutenberg serve`. You should see your new site at `localhost:1111`.
+go into your sites directory, and type `zola serve`. You should see your new site at `localhost:1111`.
 
 ### Deployment to Github Pages or Netlify
-[Gutenberg](https://www.getgutenberg.io) already has great documentation for deploying to [Netlify](https://www.getgutenberg.io/documentation/deployment/netlify/) or [Github Pages](https://www.getgutenberg.io/documentation/deployment/github-pages/). I won't bore you with a regurgitated explanation.
+[Zola](https://www.getzola.org) already has great documentation for deploying to [Netlify](https://www.getzola.org/documentation/deployment/netlify/) or [Github Pages](https://www.getzola.org/documentation/deployment/github-pages/). I won't bore you with a regurgitated explanation.
 
 ### Customizing the Theme
 All colors used on the site are from `sass/colors.scss`. There's only about 5-6 colors total.
@@ -42,7 +42,7 @@ profile = 'profile.svg'
 website = "code.liquidthink.net"
 
 # github
-github = "InsidiousMind" # case does not matter
+github = "Insipx" # case does not matter
 # twitter
 twitter = "liquid_think"
 # email
