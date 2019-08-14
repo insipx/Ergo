@@ -25,7 +25,11 @@
           {% else %}
             {{ macros::frontmatter(classes="", date="", word_count=page.word_count, read_time=page.reading_time) }}
           {% endif %}
-        <p class="article_content">{{ page.content | safe | striptags | truncate }}</p>
+          {% if page.summary %}
+            <p class="article_content">{{ page.summary | safe | striptags | truncate }}</p>
+          {% else %}
+            <p class="article_content">{{ page.content | safe | striptags | truncate }}</p>
+          {% endif %}
         <a class="button small" href="{{page.permalink}}">Continue Reading →</a>
       </article>
     {% endfor %}
