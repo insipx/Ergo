@@ -26,7 +26,7 @@
             {{ macros::frontmatter(classes="", date="", word_count=page.word_count, read_time=page.reading_time) }}
           {% endif %}
           {% if page.summary %}
-            <p class="article_content">{{ page.summary | safe | striptags | truncate }}</p>
+            <p class="article_content">{{ page.summary | safe }}</p>
           {% else %}
             <p class="article_content">{{ page.content | safe | striptags | truncate }}</p>
           {% endif %}
