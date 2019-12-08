@@ -1,4 +1,6 @@
-[ergo](http://ergo.liquidthink.net)
+[ergo LIVE DEMO](http://ergo.liquidthink.net)
+
+
 
 ![Ergo Screenshot](https://i.imgur.com/l182IYg.jpg)
 
@@ -37,6 +39,9 @@ Change them however you like! Feel free to go into theme and edit the colors. Ho
 # Specify a profile picture to use for the logos in the theme. It can be svg, png, jpg, whatever, just make sure to copy the logo you want and put it in img/${YOUR_PROFILE}.*
 # and update your config.toml accordingly
 profile = 'profile.svg'
+
+# Description. This is needed for SEO/site metadata purposes
+description = "Simple blog theme focused on writing, inspired by svbtle"
 
 # website, should not be preceded with `http://`
 website = "code.liquidthink.net"
