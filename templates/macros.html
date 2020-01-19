@@ -28,6 +28,9 @@
     {% if extra.linkedin %}
     <li class="button {{bsize}} font_faint"><a href="https://www.linkedin.com/in/{{extra.linkedin}}" target="_blank">{{extra.linkedin}}</a><i class="fab fa-linkedin" ></i></li>
     {% endif %}
+    {% if extra.reddit %}
+    <li class="button {{bsize}} font_faint"><a href="https://www.reddit.com/u/{{extra.reddit}}" target="_blank">{{extra.reddit}}</a><i class="fab fa-reddit" ></i></li>
+    {% endif %}
     {% if extra.email %}
     <li class="button {{bsize}} font_faint"><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
     {% endif %}
@@ -84,6 +87,9 @@
             {% endif %}
             {% if extra.linkedin %}
             <li><a href="https://www.linkedin.com/in/{{extra.linkedin}}" target="_blank">{{extra.linkedin}}</a><i class="fab fa-linkedin" ></i></li>
+            {% endif %}
+            {% if extra.reddit %}
+            <li><a href="https://www.reddit.com/u/{{extra.reddit}}" target="_blank">{{extra.reddit}}</a><i class="fab fa-reddit" ></i></li>
             {% endif %}
             {% if extra.email %}
             <li><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>

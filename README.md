@@ -56,6 +56,8 @@ email = "${MY_EMAIL}@cool_domain.com"
 instagram = "${your_insta}"
 # linkedin
 linkedin = "${your_linkedin}"
+# reddit
+reddit = "${your_reddit}"
 # youtube
 youtube = "${your_youtube_channel_id}"
 # if any social networks are missing from this list that you want added, open an issue. I will add it for you ASAP
