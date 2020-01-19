@@ -54,6 +54,8 @@ twitter = "liquid_think"
 email = "${MY_EMAIL}@cool_domain.com"
 # instagram
 instagram = "${your_insta}"
+# keybase
+keybase = "${your_keybase}"
 # linkedin
 linkedin = "${your_linkedin}"
 # reddit
