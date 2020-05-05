@@ -10,7 +10,6 @@
   </figure>
   <h2 class="site_title">{{config.title}}</h2>
   <div>{{config.description | markdown(inline=true) | safe }}</div>
-  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url, rss=config.generate_rss) }}
   {% endblock header %}
 </header>
 
@@ -30,7 +29,7 @@
           {% else %}
             <p class="article_content">{{ page.content | striptags | truncate | safe }}</p>
           {% endif %}
-        <a class="button small" href="{{page.permalink}}">Continue Reading →</a>
+        <a class="button small" href="{{page.permalink}}">lire plus →</a>
       </article>
     {% endfor %}
 </section>
