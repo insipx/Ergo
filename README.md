@@ -19,10 +19,22 @@ Here's a timelapse:
 
 ## Installation
 Get [Zola](https://www.getzola.org/) and/or follow their guide on [installing a theme](https://www.getzola.org/documentation/themes/installing-and-using-themes/).
-Make sure to add `theme = "ergo"` to your `config.toml`
+Make sure to add `theme = "Ergo"` to your `config.toml`
 
 #### Check zola version (only 0.4.1+)
 Just to double-check to make sure you have the right version. It is not supported to use this theme with a version under 0.4.1.
+
+### Usage
+Set your description and your theme image in your `config.toml` (get inspiration from theme config file)
+
+```toml
+description = "my site with Ergo on Zola"
+
+[extra]
+profile = "image.png"
+```
+
+Add some content `_index.md` and at least one page (get inspiration from theme content folder).
 
 ### how to serve
 go into your sites directory, and type `zola serve`. You should see your new site at `localhost:1111`.
