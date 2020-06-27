@@ -31,7 +31,7 @@
 
     <body>
       {% block menu %}
-        {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra, rss=config.generate_rss) }}
+        {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra, rss=true) }}
       {% endblock menu %}
 
       {% block content %} {% endblock content %}
