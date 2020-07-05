@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://nolik.github.io"
+base_url = "https://nolik.github.io/blog"
 
 title = "Ihar Novik"
 # a description; you can use markdown here if you like

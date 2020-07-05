@@ -6,7 +6,7 @@ category="test"
 
 # That's one small step for mankind, one giant leap for one man.
 Here we go, i finally decide to start my own tech blog. I already made some commitments as Java Innovation Head in Godel
-to share newest articles within a company and decide that it's could be useful to share within other ppl's as well.
+to share some ideas within a company and decide that it would be be useful to share thoughts within other ppl as well.
 
 As far as I try to consider myself an Rust enthusiast i chose Zola as static site generator.
 
