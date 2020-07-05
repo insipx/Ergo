@@ -10,7 +10,7 @@
   </figure>
   <h2 class="site_title">{{config.title}}</h2>
   <div>{{config.description | markdown(inline=true) | safe }}</div>
-  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url, rss=config.generate_rss) }}
+  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url) }}
   {% endblock header %}
 </header>
 

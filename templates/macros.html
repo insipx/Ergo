@@ -8,7 +8,7 @@
 {% endmacro mini_logo %}
 
 <!-- classes=any extra styling, bsize=buttonsize, extra=config.extra, siteurl=config.base_url -->
-{% macro social_list(classes, bsize, extra, rss, siteurl) %}
+{% macro social_list(classes, bsize, extra, siteurl) %}
 <ul class="social_list {{classes}}" >
     {% if extra.website %}
     <li class="button {{bsize}} font_faint"><a href="https://{{extra.website}}" target="_blank">{{extra.website}}</a></li>
@@ -37,9 +37,6 @@
     {% if extra.email %}
     <li class="button {{bsize}} font_faint"><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
     {% endif %}
-    {% if rss %}
-    <li class="button {{bsize}} font_faint"><a href="{{siteurl}}/rss.xml" target ="_blank">rss</a><i class="fas fa-rss" ></i></li>
-    {% endif %}
 </ul>
 {% endmacro social_list %}
 
@@ -55,7 +52,7 @@
 </ul>
 {% endmacro frontmatter %}
 
-{% macro menu(title, siteurl, extra, rss) %}
+{% macro menu(title, siteurl, extra) %}
 <input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
 <label class="menu cross menu--1" for="openSidebarMenu">
     <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
@@ -99,9 +96,6 @@
             {% endif %}
             {% if extra.email %}
             <li><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
-            {% endif %}
-            {% if rss %}
-            <li><a href="{{siteurl}}/rss.xml" target ="_blank">rss</a><i class="fas fa-rss" ></i></li>
             {% endif %}
         </ul>
     </div>
