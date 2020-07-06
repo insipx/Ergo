@@ -3,7 +3,7 @@ base_url = "https://nolik.github.io/blog"
 
 title = "Ihar Novik"
 # a description; you can use markdown here if you like
-description="\"Documentation is like sex: when it's good, it's very, very good, and when it's bad, it's better than nothing.\""
+description="Software engineer with passion to Java and Rust"
 default_language = "en"
 
 highlight_theme = "solarized-light"
