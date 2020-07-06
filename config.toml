@@ -3,7 +3,7 @@ base_url = "https://nolik.github.io/blog"
 
 title = "Ihar Novik"
 # a description; you can use markdown here if you like
-description="Software engineer with passion to Java and Rust"
+description="\"What's the best thing thing about UDP jokes? ... I don't care if you get them\""
 default_language = "en"
 
 highlight_theme = "solarized-light"
@@ -21,8 +21,10 @@ highlight_code = true
 build_search_index = false
 
 [extra]
+subtitle = "Software engineer passionate about Java and Rust"
+
 # theme options, (Submit an issue if any social network you may want is missing here: https://github.com/InsidiousMind/Ergo/issues)
-profile = "kot_profile.svg" # the name of the profile picture in static/img/
+profile = "profile.svg" # the name of the profile picture in static/img/
 github = "nolik"
 linkedin = "ihar-novik"
 email = "nolik03@gmail.com"
