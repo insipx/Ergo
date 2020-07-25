@@ -10,7 +10,7 @@ to share some ideas within a company and decide that it would be useful to share
 
 As far as I try to consider myself an Rust enthusiast i chose Zola as static site generator. Sure you could say:
 Hey what's about common Hugo written on Go or Jekyll actively supported by Github Pages written on Ruby?. And i could
-answer your question by reference to official github page of Zola that include comporation table:
+answer your question by reference to official github page of Zola that include comparative table:
 [Zola github](https://github.com/getzola/zola).
 
 As theme i chose [Ergo](https://github.com/insipx/Ergo) and little bit customize it. Moreover I found proper Gitlab
