@@ -19,7 +19,7 @@ The emergence of a new language with new advantages exposed already known proble
  machine not only for JVM languages and cloud native java images.
 
  ## My online topic about GraalVM and Cloud Native Frameworks
-[Godel Java Meetup New era of Subatomic Cloud Native Frameworks (Rus)](https://web.microsoftstream.com/video/69ff627e-c9a4-4cf3-a80b-69c4d242a4e0)
+[Godel Java Meetup: New era of Subatomic Cloud Native Frameworks (Rus)](https://web.microsoftstream.com/video/69ff627e-c9a4-4cf3-a80b-69c4d242a4e0)
 
 ## TBD
 
