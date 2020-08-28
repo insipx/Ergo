@@ -7,7 +7,7 @@ description="\"*to develop the skill of correct thinking is in the first place t
 default_language = "en"
 
 highlight_theme = "solarized-light"
-generate_rss = true
+generate_feed = true
 rss_limit = 20
 
 # Whether to automatically compile all Sass files in the sass directory
