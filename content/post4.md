@@ -14,4 +14,9 @@ How to start develop Telegram bot? With this question I go to the Internet and f
 Telegram site with description of Bot API: [Bots: An introduction for developers](https://core.telegram.org/bots).
 
 ## Choosing Rust Telegram Lib
-TBD
+It was a simple decision - I just gone to the crates.io and try to find any mention of telegram. The most used was library:
+[Rust Telegram Bot Library: telegram-bot](https://crates.io/crates/telegram-bot). It has pretty reach readmi with simple
+example.
+
+## Creating bot project
+And I start to develop: [My Telegram Bot Repo](https://github.com/nolik/rust-by-bot)
