@@ -21,8 +21,8 @@ Here's a timelapse:
 Get [Zola](https://www.getzola.org/) and/or follow their guide on [installing a theme](https://www.getzola.org/documentation/themes/installing-and-using-themes/).
 Make sure to add `theme = "ergo"` to your `config.toml`
 
-#### Check zola version (only 0.4.1+)
-Just to double-check to make sure you have the right version. It is not supported to use this theme with a version under 0.4.1.
+#### Check zola version (only 0.11.0+)
+Just to double-check to make sure you have the right version. It is not supported to use this theme with a version under 0.11.0.
 
 ### how to serve
 go into your sites directory, and type `zola serve`. You should see your new site at `localhost:1111`.
