@@ -4,16 +4,18 @@ date=2020-08-26
 category="thoughts"
 +++
 
-On August 13, I was shocked by the news of the massive layoffs at the Mozilla.
-The first information I got from Twitter about lays off one person from Mozilla's Rust team:
+#### On August 13, I was shocked by the news of the massive layoffs at the Mozilla.
 ---
+The first information I got from Twitter about lays off one person from Mozilla's Rust team:
 [Till Schneidereit: Much of the team I used to manage was part of the Mozilla layoffs on Tuesday.](https://twitter.com/tschneidereit/status/1293868141953667074)
 
 ## The next swallow
-The next swallow was the news from Hacker News about abbreviations in the Servo command, which I consider one of the
-fundamental projects of the Rust language.
 ---
+The next swallow was the news from Hacker News about abbreviations in the [Servo]( https://servo.org/) team, which I
+consider one of the fundamental projects of the Rust language.
+
 [Hacker News: inside about layoffs in the Mozilla.](https://news.ycombinator.com/item?id=24133342)
+---
 
 ## How money changes principles
 [Mitchell Baker: Changing World, Changing Mozilla.](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla)
