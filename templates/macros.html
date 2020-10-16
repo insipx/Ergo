@@ -16,8 +16,19 @@
     {% if extra.github %}
     <li class="button {{bsize}} font_faint"><a href="https://github.com/{{extra.github}}" target="_blank" >{{extra.github}}</a><i class="fab fa-github" ></i></li>
     {% endif %}
+    {% if extra.gitlab %}
+    <li class="button {{bsize}} font_faint"><a href="https://gitlab.com/{{extra.gitlab}}" target="_blank" >{{extra.gitlab}}</a><i class="fab fa-gitlab" ></i></li>
+    {% endif %}
     {% if extra.twitter %}
     <li class="button {{bsize}} font_faint"><a href="https://twitter.com/{{extra.twitter}}" target="_blank">@{{extra.twitter}}</a><i class="fab fa-twitter" ></i></li>
+    {% endif %}
+    {% if extra.telegram %}
+    <li class="button {{bsize}} font_faint"><a href="https://t.me/{{extra.telegram}}" target="_blank">@{{extra.telegram}}</a><i class="fab fa-telegram" ></i></li>
+    {% endif %}
+    {% if extra.vk %}
+    <li class="button {{bsize}} font_faint"><a
+            href="https://vk.com/{{extra.vk}}"
+            target="_blank">@{{extra.vk}}</a><i class="fab fa-vk" ></i></li>
     {% endif %}
     {% if extra.instagram %}
     <li class="button {{bsize}} font_faint"><a href="https://instagram.com/{{extra.instagram}}"  target="_blank">{{extra.instagram}}</a><i class="fab fa-instagram" ></i></li>
