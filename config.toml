@@ -35,3 +35,10 @@ email = "github@andrewplaza.dev"
 # keybase = ""
 # reddit = ""
 # youtube = ""
+# comments settings
+[extra.comments] # Optional
+repo = "insipx/Ergo"
+theme = "github-light"
+label = "comment" # Optional
+#issue_number = 1 # Specify either this or term
+term = "pathname"

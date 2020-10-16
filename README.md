@@ -71,7 +71,7 @@ youtube = "${your_youtube_channel_id}"
   - [ ] Edit Colors in `config.toml`
   - [x] NoJS
   - [ ] Analytics
-  - [ ] Comments?
+  - [x] Comments?
   - [ ] Like button http://kudosplease.com/
   - [ ] categories?
   - [ ] related posts? (would meaningful related posts, or unmeaningful ones, be worth it w/o database?)
