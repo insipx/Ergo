@@ -22,7 +22,6 @@
          \/____/                  \|___|
 
 */
-@import 'colors';
 @import 'menu';
 @import 'vars';
 @import 'macros';
@@ -30,6 +29,7 @@
 
 html, body {
     background-color: $background;
+    color: $text;
     font-family: 'Montserrat', 'Raleway', sans-serif;
     font-weight: 400;
     z-index: 50;
