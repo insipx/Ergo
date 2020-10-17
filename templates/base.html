@@ -14,13 +14,15 @@
         {% endif %}
 
         <!-- Enable responsiveness on mobile devices-->
-        <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+        <!-- js -->
+        <script src="/theme_selector.js"></script>
 
         <!--  css -->
-        <link rel="stylesheet"
-              href="{{ config.base_url }}/{% if config.extra.color_theme
-              %}{{ config.extra.color_theme }}{%
-              else %}default{% endif%}.css" >
+        <link id="themeCSS" rel="stylesheet"
+              href="/{% if config.extra.color_themes %}{{ config.extra.color_themes[0] }}{% else %}default{% endif%}.css"
+        />
 
         <!-- fonts -->
         <!-- preload  -->
@@ -32,7 +34,7 @@
       {% endblock head %}
     </head>
 
-    <body>
+    <body onload="main();">
       {% block menu %}
         {{ macros::menu(title=config.title, siteurl=config.base_url, extra=config.extra, rss=config.generate_feed) }}
       {% endblock menu %}
@@ -44,6 +46,7 @@
         {% block footer %}
           {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
           {{ macros::social_list(classes="foot_list", bsize="extra_small", extra=config.extra, siteurl=config.base_url, rss=config.generate_feed) }}
+          {{ macros::theme_selector(themes=config.extra.color_themes) }}
         {% endblock footer %}
       </footer>
     </body>

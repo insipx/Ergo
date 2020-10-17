@@ -1,3 +1,12 @@
+{% macro theme_selector(themes) %}
+<select id="theme_selector" size=1>
+    <option value="{{themes[0]}}" selected>{{themes[0]}}</option>
+    {% for theme in themes | slice(start=1) %}
+    <option value="{{theme}}">{{theme}}</option>
+    {% endfor %}
+</select>
+{% endmacro theme_selector %}
+
 {% macro mini_logo(classes, title, siteurl, logourl) %}
 <figure class="mini_logo {{ classes }}">
     <a href="{{siteurl}}" style="background-image: url({{siteurl}}/img/{{logourl}})"></a>
