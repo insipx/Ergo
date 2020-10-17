@@ -451,3 +451,28 @@ nav.pagination {
     color: $background;
     border: 1px solid $accent;
 }
+
+#languageSelector {
+  > ul {
+    > li {
+      display: inline;
+      font-weight: bold;
+      color: $accent;
+      > a {
+        color: $text;
+        text-decoration: none;
+        font-size: 1em;
+      }
+      img {
+        max-height: 1.5em;
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
+.overlord > #languageSelector > ul {
+  margin-top: 50px;
+  transform: translateY(-50%) translateX(20px);
+}
