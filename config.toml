@@ -35,3 +35,4 @@ email = "github@andrewplaza.dev"
 # keybase = ""
 # reddit = ""
 # youtube = ""
+color_themes = ["default", "dark"]

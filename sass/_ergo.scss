@@ -22,7 +22,6 @@
          \/____/                  \|___|
 
 */
-@import 'colors';
 @import 'menu';
 @import 'vars';
 @import 'macros';
@@ -30,6 +29,7 @@
 
 html, body {
     background-color: $background;
+    color: $text;
     font-family: 'Montserrat', 'Raleway', sans-serif;
     font-weight: 400;
     z-index: 50;
@@ -198,7 +198,7 @@ tr {
     margin-top: 140px;
     padding-bottom: 50px;
     margin-bottom: 50px;
-    border-bottom: 0px solid #f0f0f0;
+    border-bottom: 0px solid $accent;
     text-align: center;
     > h1,h2,h3 {
         max-width: 600px;
