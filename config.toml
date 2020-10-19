@@ -35,6 +35,7 @@ email = "github@andrewplaza.dev"
 # keybase = ""
 # reddit = ""
 # youtube = ""
+color_themes = ["default", "dark"]
 # comments settings
 [extra.comments] # Optional
 repo = "insipx/Ergo"
