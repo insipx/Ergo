@@ -127,3 +127,10 @@
     </div>
 </div>
 {% endmacro menu %}
+
+{% macro country_flag(language) %}
+{% if language == "en" %}
+{% set language = "us" %}
+{% endif %}
+<img src="https://www.countryflags.io/{{language}}/flat/64.png"/>
+{% endmacro country_flag %}

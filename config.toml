@@ -36,6 +36,7 @@ email = "github@andrewplaza.dev"
 # reddit = ""
 # youtube = ""
 color_themes = ["default", "dark"]
+country_flags = true # Display languages as country flags. Defaults to false.
 # comments settings
 [extra.comments] # Optional
 repo = "insipx/Ergo"
