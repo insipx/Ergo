@@ -21,6 +21,8 @@ Here's a timelapse:
 Get [Zola](https://www.getzola.org/) and/or follow their guide on [installing a theme](https://www.getzola.org/documentation/themes/installing-and-using-themes/).
 Make sure to add `theme = "ergo"` to your `config.toml`
 
+Ergo relies on having `paginate_by` variable set in `content/_index.md`.
+
 #### Check zola version (only 0.11.0+)
 Just to double-check to make sure you have the right version. It is not supported to use this theme with a version under 0.11.0.
 
