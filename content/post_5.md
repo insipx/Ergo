@@ -1,5 +1,5 @@
 +++
-title="Apache Kafka vs Apache Pulsar - or That's why you should be skeptical about benchmarks"
+title="Kafka vs Pulsar - why we should be skeptical about benchmarks"
 date=2020-11-12
 category="thoughts"
 +++
