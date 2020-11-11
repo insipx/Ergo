@@ -4,29 +4,34 @@ date=2020-08-26
 category="thoughts"
 +++
 
-On August 13, I was shocked by the news of the massive layoffs at the Mozilla.
-The first information I got from Twitter about lays off one person from Mozilla's Rust team:
+#### On August 13, I was shocked by the news of the massive layoffs at the Mozilla.
 ---
+The first information I got from Twitter about lays off one person from Mozilla's Rust team:
 [Till Schneidereit: Much of the team I used to manage was part of the Mozilla layoffs on Tuesday.](https://twitter.com/tschneidereit/status/1293868141953667074)
 
 ## The next swallow
-The next swallow was the news from Hacker News about abbreviations in the Servo command, which I consider one of the
-fundamental projects of the Rust language.
 ---
+The next swallow was the news from Hacker News about abbreviations in the [Servo]( https://servo.org/) team, which I
+consider one of the fundamental projects of the Rust language.
+
 [Hacker News: inside about layoffs in the Mozilla.](https://news.ycombinator.com/item?id=24133342)
 
 ## How money changes principles
-[Mitchell Baker: Changing World, Changing Mozilla.](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla)
 ---
+[Mitchell Baker: Changing World, Changing Mozilla.](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla)
+
 This blog announcement was released before layoffs and freezing projects as Servo in the Mozilla. The announcement based
 on the 5 point. And if you read between the lines, then the main message is indicated in the last paragraph: focus on
-the economy: `building a better internet by creating new kinds of value in Firefox; investing in innovation and creating
-new products; and adjusting our finances to ensure stability over the long term.`. An old adage immediately comes to
-mind: if you don't see an obvious reason for an act, then most likely it's money. You can remember about The Mozilla
+the economy:
+```building a better internet by creating new kinds of value in Firefox; investing in innovation and creating
+new products; and adjusting our finances to ensure stability over the long term.
+```
+An old adage immediately comes to mind: if you don't see an obvious reason for an act, then most likely it's money. You can remember about The Mozilla
 Manifesto with the pledge for a Healthy Internet and Mozilla Foundation that non-profit organization. And as a
 counterbalance to this the Mozilla Corporation with its own `economics goals`.
 
 ## Laying the foundation for Rust's future
+---
 seems Rust teams was to be shocked but not destroyed and in a blog post the Rust Core team reported:
 ```
 There’s no denying the impact these layoffs have had on all members of the Rust community, particularly the folks who
