@@ -8,10 +8,10 @@ category="thoughts"
 Comparison benchmarks in IT industry it's not the only way to prove some metric supremacy of some tech/frameworks, but also a way to promote your technology. The last point is often interested in vendors and companies providing consulting services. By myself, from time to time I check [Web Framework Benchmarks](https://www.techempower.com/benchmarks) to see how freaking fast Rust frameworks like Actix in comparison to more adopted web frameworks writen on other languages.
 
 ## Kafka supremacy
-[Web Framework Benchmarks](https://www.confluent.io/blog/kafka-fastest-messaging-system/)
+[Benchmarking Apache Kafka, Apache Pulsar, and RabbitMQ: Which is the Fastest?](https://www.confluent.io/blog/kafka-fastest-messaging-system/)
 
 ## The ~Empire~ Pulsar Strikes Back
-[Web Framework Benchmarks](https://streamnative.io/blog/tech/2020-11-09-benchmark-pulsar-kafka-performance) 
+[Benchmarking Pulsar and Kafka - A More Accurate Perspective on Pulsar’s Performance](https://streamnative.io/blog/tech/2020-11-09-benchmark-pulsar-kafka-performance) 
 
 ## Why you should be sceptical about Benchmarks
 1. Methodology - each benchmarker use own metodology that often doesn't represent all side of compared technologies that put technologies into uncompetitive environment.
