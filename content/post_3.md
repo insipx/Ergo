@@ -23,9 +23,10 @@ consider one of the fundamental projects of the Rust language.
 This blog announcement was released before layoffs and freezing projects as Servo in the Mozilla. The announcement based
 on the 5 point. And if you read between the lines, then the main message is indicated in the last paragraph: focus on
 the economy:
-```building a better internet by creating new kinds of value in Firefox; investing in innovation and creating
+{% quote(author="Mitchell Baker") %} Building a better internet by creating new kinds of value in Firefox; investing in innovation and creating
 new products; and adjusting our finances to ensure stability over the long term.
-```
+%}
+
 An old adage immediately comes to mind: if you don't see an obvious reason for an act, then most likely it's money. You can remember about The Mozilla
 Manifesto with the pledge for a Healthy Internet and Mozilla Foundation that non-profit organization. And as a
 counterbalance to this the Mozilla Corporation with its own `economics goals`.
@@ -33,7 +34,7 @@ counterbalance to this the Mozilla Corporation with its own `economics goals`.
 ## Laying the foundation for Rust's future
 ---
 seems Rust teams was to be shocked but not destroyed and in a blog post the Rust Core team reported:
-```
+{% quote(author="The Rust Core Team") %}
 There’s no denying the impact these layoffs have had on all members of the Rust community, particularly the folks who
 have lost their jobs in the middle of a global pandemic. Notwithstanding the deep personal impact, the Rust project as
 a whole is very resilient to such events. We have leaders and contributors from a diverse set of different backgrounds
@@ -43,6 +44,6 @@ Rust leadership contributed to Rust in their personal time, not as a part of the
 emphasize that membership in Rust teams is given to individuals and is not connected to one’s employer. Mozilla employees
 who are also members of the Rust teams continue to be members today, even if they were affected by the layoffs. Of
 course, some may choose to scale back their involvement.
-```
+%}
 Later they make an announcement about creation of Rust foundation:
 [Laying the foundation for Rust's future](https://blog.rust-lang.org/2020/08/18/laying-the-foundation-for-rusts-future.html)
