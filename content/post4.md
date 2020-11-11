@@ -23,5 +23,5 @@ I was surprised by simplicity of telegram-bot creation, that help to build simpl
 ## CI / CD
 Additionally, I found very useful Github Actions for Rust that cover all basic continuous integration features + have suitable integration with Heroku that used like a hosting for bot: [Rust Github Action](https://github.com/marketplace/actions/rust-action)
 
-## In the plans
+## To do List
 As far I use Heroku Free Dyno Usage and for now I deploy app like a worker. As far I store state in memory - I lose it with each redeploy. I'm planning to add some persistent storage and try to use the most popular one for Rust: [Diesel ORM](http://diesel.rs/)
