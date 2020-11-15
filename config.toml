@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://nolik.github.io/blog"
 
-title = "Ihar Novik"
+title = "The One Engineer Blog"
 # a description; you can use markdown here if you like
 description="\"What's the best thing about UDP jokes? ... I don't care if you get them\""
 default_language = "en"
