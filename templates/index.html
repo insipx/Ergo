@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
-
 {% block content %}
+<nav>{% include "languages.html" %}</nav>
 <header class="header">
   {% block header %}
   <figure class="user_logo">
@@ -11,7 +11,7 @@
   <h2 class="site_title">{{config.title}}</h2>
   <h3>{{config.extra.subtitle | safe }}</h3>
   <div>{{config.description | markdown(inline=true) | safe }}</div>
-  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url) }}
+  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url, rss=config.generate_feed) }}
   {% endblock header %}
 </header>
 
@@ -36,7 +36,6 @@
     {% endfor %}
 </section>
 {% endblock content %}
-
 
 
 {% block pagination %}

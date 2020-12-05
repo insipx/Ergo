@@ -1,4 +1,3 @@
-@import 'colors';
 @import 'vars';
 
 #sidebarMenu {
@@ -9,7 +8,7 @@
     top: 0%;
     transform: translateX(11em);
     transition: transform 150ms ease-in-out;
-    z-index: 90;
+    z-index: 110;
 }
 
 #sidebarMenu:focus, input:focus {
@@ -21,7 +20,7 @@
     width: 100%;
     height: 100%;
     background: $background;
-    z-index: 90;
+    z-index: 110;
     padding-top: 5em;
     box-shadow: -0.10em 0 1em $outline, 1em 1em 1em 0 rgba(0,0,0,0.19);
 }
@@ -31,7 +30,7 @@
     padding:0;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
     right: 0;
-    z-index: 95;
+    z-index: 115;
 }
 
 .sidebarMenuInner li:not(:first-child){
@@ -93,7 +92,7 @@
     margin: auto;
     margin-right: -10px;
     margin-bottom: 2em;
-    z-index: 91;
+    z-index: 111;
 }
 
 .sidebarMenuInner {
@@ -138,7 +137,7 @@ label {
 .menu--1 label {
     top: 0;
     right: 1em;
-    z-index: 100;
+    z-index: 120;
 }
 
 path {
@@ -157,7 +156,7 @@ path {
   --offset: -38;
   top: 0%;
   right: 1em;
-  z-index: 91;
+  z-index: 111;
   position: fixed;
   @media screen and (max-width: 750px) { // if screen is too small, don't let the menu drag when trying to read text
       position: absolute;
