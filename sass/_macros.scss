@@ -1,3 +1,5 @@
+@import 'colors';
+
 figure.mini_logo {
     width: 30px;
     height: 30px;
@@ -40,7 +42,6 @@ figure.mini_logo + h5 {
 ul.social_list {
     display: inline-block;
     position: relative;
-    padding: 0;
     > li {
         margin: 0.10em 0.10em 0.10em 0.10em;
         list-style: none;
