@@ -1,8 +1,10 @@
+name: Build and deploy on PR
+
 on:
-  push:
+  pull_request:
     branches:
       - master
-name: Build and deploy on push
+
 jobs:
   build:
     name: zola-deploy-action
