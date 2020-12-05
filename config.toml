@@ -39,7 +39,7 @@ color_themes = ["default", "dark"]
 country_flags = true # Display languages as country flags. Defaults to false.
 # comments settings
 [extra.comments] # Optional
-repo = "nolik/blog"
+repo = "insipx/Ergo"
 theme = "github-light"
 label = "comment" # Optional
 #issue_number = 1 # Specify either this or term
