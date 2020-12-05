@@ -22,6 +22,7 @@
          \/____/                  \|___|
 
 */
+@import 'colors';
 @import 'menu';
 @import 'vars';
 @import 'macros';
@@ -29,7 +30,6 @@
 
 html, body {
     background-color: $background;
-    color: $text;
     font-family: 'Montserrat', 'Raleway', sans-serif;
     font-weight: 400;
     z-index: 50;
@@ -76,8 +76,11 @@ p,li,ul {
 pre {
     border-radius: 0.25em;
     padding: 0.65em;
-    overflow-x: auto;
-    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 blockquote {
@@ -196,7 +199,7 @@ tr {
     margin-top: 30px;
     padding-bottom: 50px;
     margin-bottom: 50px;
-    border-bottom: 0px solid $accent;
+    border-bottom: 0px solid #f0f0f0;
     text-align: center;
     > h1,h2,h3 {
         max-width: 600px;
@@ -448,29 +451,4 @@ nav.pagination {
     background-color: $accent;
     color: $background;
     border: 1px solid $accent;
-}
-
-#languageSelector {
-  > ul {
-    > li {
-      display: inline;
-      font-weight: bold;
-      color: $accent;
-      > a {
-        color: $text;
-        text-decoration: none;
-        font-size: 1em;
-      }
-      img {
-        max-height: 1.5em;
-        height: auto;
-        width: auto;
-      }
-    }
-  }
-}
-
-.overlord > #languageSelector > ul {
-  margin-top: 50px;
-  transform: translateY(-50%) translateX(20px);
 }
