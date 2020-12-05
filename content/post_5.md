@@ -14,6 +14,6 @@ Comparison benchmarks in IT industry it's not the only way to prove some metric 
 [Benchmarking Pulsar and Kafka - A More Accurate Perspective on Pulsar’s Performance](https://streamnative.io/blog/tech/2020-11-09-benchmark-pulsar-kafka-performance) 
 
 ## Why you should be sceptical about Benchmarks
-1. Methodology - each benchmarker use own metodology that often doesn't represent all side of compared technologies that put technologies into uncompetitive environment.
-2. Expertiese in wishful technology and incompitence in other - as a result we able to see benchmarks where compared competetive technology could be not correctly settuped/configured.
-3. Wishful thinking of authours - results of benchmarks could be interpritied wrongly with desire put one technology into better position to other.
+1. Methodology - each benchmark use own methodology that often doesn't represent all side of compared technologies that put technologies into uncompetitive environment.
+2. Expertise in wishful technology and incompetence in other - as a result we are able to see benchmarks where compared competitive technology could be not correctly settuped/configured.
+3. Wishful thinking of authors - results of benchmarks could be interpreted wrongly with desire put one technology into better position to other.
