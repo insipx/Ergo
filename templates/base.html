@@ -17,11 +17,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
 
         <!-- js -->
-        <script src="/theme_selector.js"></script>
+        <script src="{{ config.base_url }}/theme_selector.js"></script>
 
         <!--  css -->
         <link id="themeCSS" rel="stylesheet"
-              href="/{% if config.extra.color_themes %}{{ config.extra.color_themes[0] }}{% else %}default{% endif%}.css"
+              href="{{ config.base_url }}/{% if config.extra.color_themes %}{{ config.extra.color_themes[0] }}{% else %}default{% endif%}.css"
         />
 
         <!-- fonts -->
