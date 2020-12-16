@@ -98,17 +98,18 @@ hr {
 
 article {
     a {
-        border-bottom: 2px solid $outline;
+        text-decoration: underline;
+        text-decoration-color: $outline;
+        text-decoration-thickness: 2px;
         color: $text;
     }
     a:link {
-        text-decoration: none;
         transition-property: all;
         transition-duration: 0.35s;
     }
     a:hover {
         outline: 0;
-        border-bottom: 2px solid $accent;
+        text-decoration-color: $accent;
         opacity: 1;
     }
 }
