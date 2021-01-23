@@ -35,6 +35,7 @@ email = "github@andrewplaza.dev"
 # keybase = ""
 # reddit = ""
 # youtube = ""
+# fedi = ""
 color_themes = ["default", "dark"]
 country_flags = true # Display languages as country flags. Defaults to false.
 # comments settings
