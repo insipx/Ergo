@@ -57,6 +57,20 @@
     {% if extra.email %}
     <li class="button {{bsize}} font_faint"><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
     {% endif %}
+    {% if extra.fedi %}
+    {% set components = extra.fedi | split(pat="@") %}
+    {% if components | length != 3 or components[0] != "" %}
+    {{ throw(message="Invalid fediverse handle!") }}
+    {% endif %}
+    {% set user = components[1] %}
+    {% set server = components[2] %}
+    {% set uri = "acct:" ~ user ~ "@" ~ server %}
+    {% set webfinger = "https://" ~ server ~ "/.well-known/webfinger?resource=" ~ uri %}
+    {% set response = load_data(url=webfinger, format="json") %}
+    {% set link = response.links | filter(attribute="rel", value="http://webfinger.net/rel/profile-page") | first %}
+    {% set fedi = link.href %}
+    <li class="button {{bsize}} font_faint"><a href="{{fedi}}" target="_blank" >{{extra.fedi}}</a><i class="fab fa-mastodon" ></i></li>
+    {% endif %}
     {% if feed %}
     <li class="button {{bsize}} font_faint"><a href="{{siteurl}}/{{feed_file}}" target ="_blank">{{ feed_file | trim_end_matches(pat=".xml") }}</a><i class="fas fa-rss" ></i></li>
     {% endif %}
