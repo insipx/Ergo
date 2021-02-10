@@ -1,2 +1,2 @@
 # blog
-Personal tech blog builded on Zola.
+Personal tech blog built on Zola.
