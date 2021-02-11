@@ -8,7 +8,7 @@
 {% endmacro mini_logo %}
 
 <!-- classes=any extra styling, bsize=buttonsize, extra=config.extra, siteurl=config.base_url -->
-{% macro social_list(classes, bsize, extra, siteurl) %}
+{% macro social_list(classes, bsize, extra, feed, feed_file, siteurl) %}
 <ul class="social_list {{classes}}" >
     {% if extra.website %}
     <li class="button {{bsize}} font_faint"><a href="https://{{extra.website}}" target="_blank">{{extra.website}}</a></li>
@@ -16,8 +16,19 @@
     {% if extra.github %}
     <li class="button {{bsize}} font_faint"><a href="https://github.com/{{extra.github}}" target="_blank" >{{extra.github}}</a><i class="fab fa-github" ></i></li>
     {% endif %}
+    {% if extra.gitlab %}
+    <li class="button {{bsize}} font_faint"><a href="https://gitlab.com/{{extra.gitlab}}" target="_blank" >{{extra.gitlab}}</a><i class="fab fa-gitlab" ></i></li>
+    {% endif %}
     {% if extra.twitter %}
     <li class="button {{bsize}} font_faint"><a href="https://twitter.com/{{extra.twitter}}" target="_blank">@{{extra.twitter}}</a><i class="fab fa-twitter" ></i></li>
+    {% endif %}
+    {% if extra.telegram %}
+    <li class="button {{bsize}} font_faint"><a href="https://t.me/{{extra.telegram}}" target="_blank">@{{extra.telegram}}</a><i class="fab fa-telegram" ></i></li>
+    {% endif %}
+    {% if extra.vk %}
+    <li class="button {{bsize}} font_faint"><a
+        href="https://vk.com/{{extra.vk}}"
+        target="_blank">@{{extra.vk}}</a><i class="fab fa-vk" ></i></li>
     {% endif %}
     {% if extra.instagram %}
     <li class="button {{bsize}} font_faint"><a href="https://instagram.com/{{extra.instagram}}"  target="_blank">{{extra.instagram}}</a><i class="fab fa-instagram" ></i></li>
@@ -37,6 +48,23 @@
     {% if extra.email %}
     <li class="button {{bsize}} font_faint"><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
     {% endif %}
+    {% if extra.fedi %}
+    {% set components = extra.fedi | split(pat="@") %}
+    {% if components | length != 3 or components[0] != "" %}
+    {{ throw(message="Invalid fediverse handle!") }}
+    {% endif %}
+    {% set user = components[1] %}
+    {% set server = components[2] %}
+    {% set uri = "acct:" ~ user ~ "@" ~ server %}
+    {% set webfinger = "https://" ~ server ~ "/.well-known/webfinger?resource=" ~ uri %}
+    {% set response = load_data(url=webfinger, format="json") %}
+    {% set link = response.links | filter(attribute="rel", value="http://webfinger.net/rel/profile-page") | first %}
+    {% set fedi = link.href %}
+    <li class="button {{bsize}} font_faint"><a href="{{fedi}}" target="_blank" >{{extra.fedi}}</a><i class="fab fa-mastodon" ></i></li>
+    {% endif %}
+    {% if feed %}
+    <li class="button {{bsize}} font_faint"><a href="{{siteurl}}/{{feed_file}}" target ="_blank">{{ feed_file | trim_end_matches(pat=".xml") }}</a><i class="fas fa-rss" ></i></li>
+    {% endif %}
 </ul>
 {% endmacro social_list %}
 
@@ -52,7 +80,7 @@
 </ul>
 {% endmacro frontmatter %}
 
-{% macro menu(title, siteurl, extra) %}
+{% macro menu(title, siteurl, extra, feed, feed_file) %}
 <input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
 <label class="menu cross menu--1" for="openSidebarMenu">
     <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
@@ -73,6 +101,7 @@
             {% if extra.website %}
             <li><a href="https://{{extra.website}}" target="_blank">{{extra.website}}</a></li>
             {% endif %}
+            {% include "partials/menu-extra.html" %}
             {% if extra.github %}
             <li><a href="https://github.com/{{extra.github}}" target="_blank" >{{extra.github}}</a><i class="fab fa-github" ></i></li>
             {% endif %}
@@ -97,7 +126,17 @@
             {% if extra.email %}
             <li><a href="mailto:{{extra.email}}?subject=hi" target="_blank">say hello</a><i class="fas fa-envelope" ></i></li>
             {% endif %}
+            {% if feed %}
+            <li><a href="{{siteurl}}/{{feed_file}}" target ="_blank">{{ feed_file | trim_end_matches(pat=".xml") }}</a><i class="fas fa-rss" ></i></li>
+            {% endif %}
         </ul>
     </div>
 </div>
 {% endmacro menu %}
+
+{% macro country_flag(language) %}
+{% if language == "en" %}
+{% set language = "us" %}
+{% endif %}
+<img src="https://www.countryflags.io/{{language}}/flat/64.png"/>
+{% endmacro country_flag %}
