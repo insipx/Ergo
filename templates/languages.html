@@ -13,23 +13,15 @@
 
         {% for l in languages | concat(with=default_language) | sort %}
         <li>
-            {% if l == lang %}
+            {% if l != lang %}
+            <a href="{{get_url(path=defpath, lang=l)}}">
+            {% endif %}
             {% if config.extra.country_flags %}
-            {{ macros::country_flag(language=l) }}
-            {% else %}
-            {{ l }}
-            {% endif %}
-            {% else %}
-            {% set newpath = defpath %}
-            {% if l != default_language %}
-            {% set newpath = "/" ~ l ~ newpath %}
-            {% endif %}
-            <a href="{{ config.base_url }}{{ newpath }}">
-                {% if config.extra.country_flags %}
                 {{ macros::country_flag(language=l) }}
-                {% else %}
+            {% else %}
                 {{ l }}
-                {% endif %}
+            {% endif %}
+            {% if l != lang %}
             </a>
             {% endif %}
         </li>

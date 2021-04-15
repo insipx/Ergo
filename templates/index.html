@@ -20,16 +20,13 @@
         <h1 class="article_title" >
           <a href="{{page.permalink}}"  id="article_link" >{{page.title}}</a>
         </h1>
-          {% if page.date %}
-            {{ macros::frontmatter(classes="", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
-          {% else %}
-            {{ macros::frontmatter(classes="", date="", word_count=page.word_count, read_time=page.reading_time) }}
-          {% endif %}
-          {% if page.summary %}
-            <p class="article_content">{{ page.summary | safe }}</p>
-          {% else %}
-            <p class="article_content">{{ page.content | striptags | truncate | safe }}</p>
-          {% endif %}
+            {{ macros::frontmatter(
+                  classes="",
+                  date=page.date | default(value=""),
+                  word_count=page.word_count,
+                  read_time=page.reading_time
+            ) }}
+            <p class="article_content">{{ page.summary | default(value=page.content | striptags | truncate) | safe }}</p>
         <a class="button small" href="{{page.permalink}}">Continue Reading →</a>
       </article>
     {% endfor %}

@@ -23,21 +23,31 @@ build_search_index = false
 [extra]
 # theme options, (Submit an issue if any social network you may want is missing here: https://github.com/InsidiousMind/Ergo/issues)
 profile = "profile.svg" # the name of the profile picture in static/img/
-website = "liquidthink.net"
-github = "insipx"
-# gitlab = ""
-twitter = "insipx"
-# telegram = ""
-# vk = ""
-# linkedin = ""
-email = "github@andrewplaza.dev"
-# instagram = ""
-# keybase = ""
-# reddit = ""
-# youtube = ""
 color_themes = ["default", "dark"]
 country_flags = true # Display languages as country flags. Defaults to false.
-# comments settings
+
+[[extra.socials]]
+icon = "globe"
+icon_class = "fas"
+display = "liquidthink.net"
+uri = "liquidthink.net"
+
+[[extra.socials]]
+icon = "github"
+display = "insipx"
+uri = "https://github.com/insipx"
+
+[[extra.socials]]
+icon = "twitter"
+display = "insipx"
+uri = "https://twitter.com/insipx"
+
+[[extra.socials]]
+icon = "envelope"
+icon_class = "fas"
+display = "say hello"
+uri = "mailto:github@andrewplaza.dev?subject=hi"
+
 [extra.comments] # Optional
 repo = "insipx/Ergo"
 theme = "github-light"
