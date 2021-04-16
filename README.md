@@ -61,7 +61,7 @@ uri = "https://github.com/Insipx"
 
 [[extra.socials]] # twitter
 icon = "twitter"
-display = "liquid_think"
+display = "@liquid_think"
 uri = "https://twitter.com/liquid_think"
 
 [[extra.socials]] # email
