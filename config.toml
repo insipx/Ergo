@@ -54,3 +54,6 @@ theme = "github-light"
 label = "comment" # Optional
 #issue_number = 1 # Specify either this or term
 term = "pathname"
+
+[extra.font_awesome]
+kit = "e307e34624"
