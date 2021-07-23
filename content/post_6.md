@@ -1,5 +1,7 @@
-+++ title="Development of the Rust community in Belarus"
-date=2021-05-01 category="rust"
++++
+title="Development of the Rust community in Belarus"
+date=2021-05-01
+category="rust"
 +++
 
 ## The state of the Rust in Belarus
