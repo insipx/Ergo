@@ -1,50 +1,52 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
+
 {% block content %}
-<nav>{% include "languages.html" %}</nav>
 <header class="header">
-    {% block header %}
-    <figure class="user_logo">
-        <a href="{{config.base_url}}" style="background-image: url({{config.base_url}}/img/{{config.extra.profile}}"></a>
-    </figure>
-    <h2 class="site_title">{{config.title}}</h2>
-    <div>{{config.description | markdown(inline=true) | safe }}</div>
-    {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url, feed=config.generate_feed, feed_file=config.feed_file | default(value="atom.xml")) }}
-    {% endblock header %}
+  {% block header %}
+  <figure class="user_logo">
+      <a href="{{config.base_url}}" style="background-image: url({{config.base_url}}/img/{{config.extra.profile}}"></a>
+  </figure>
+  <h2 class="site_title">{{config.title}}</h2>
+  <h3>{{config.extra.subtitle | safe }}</h3>
+  <div>{{config.description | markdown(inline=true) | safe }}</div>
+  {{ macros::social_list(classes="header_list", bsize="small", extra=config.extra, siteurl=config.base_url) }}
+  {% endblock header %}
 </header>
 
 <section class="post_list">
     {% for page in paginator.pages %}
-    <article id="{{page.title}}" class="post_list_item">
+      <article id="{{page.title}}" class="post_list_item">
         <h1 class="article_title" >
-            <a href="{{page.permalink}}"  id="article_link" >{{page.title}}</a>
+          <a href="{{page.permalink}}"  id="article_link" >{{page.title}}</a>
         </h1>
-            {% if page.date %}
+          {% if page.date %}
             {{ macros::frontmatter(classes="", date=page.date, word_count=page.word_count, read_time=page.reading_time) }}
-            {% else %}
+          {% else %}
             {{ macros::frontmatter(classes="", date="", word_count=page.word_count, read_time=page.reading_time) }}
-            {% endif %}
-            {% if page.summary %}
+          {% endif %}
+          {% if page.summary %}
             <p class="article_content">{{ page.summary | safe }}</p>
-            {% else %}
+          {% else %}
             <p class="article_content">{{ page.content | striptags | truncate | safe }}</p>
-            {% endif %}
-            <a class="button small" href="{{page.permalink}}">Continue Reading →</a>
-    </article>
+          {% endif %}
+        <a class="button small" href="{{page.permalink}}">Continue Reading →</a>
+      </article>
     {% endfor %}
 </section>
 {% endblock content %}
 
 
+
 {% block pagination %}
-<nav class="pagination">
+  <nav class="pagination">
     {% if paginator.previous %}
-    <span class="prev" ><a rel="prev" href="{{paginator.previous}}" class="button medium font_faint">← prev</a></span>
+      <span class="prev" ><a rel="prev" href="{{paginator.previous}}" class="button medium font_faint">← prev</a></span>
     {% endif %}
 
     {% if paginator.next %}
-    <span class="next" ><a rel="next" href="{{paginator.next}}" class="button medium font_faint">next →</a></span>
+      <span class="next" ><a rel="next" href="{{paginator.next}}" class="button medium font_faint">next →</a></span>
     {% endif %}
-</nav>
+  </nav>
 {% endblock pagination %}
