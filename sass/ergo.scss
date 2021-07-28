@@ -101,18 +101,17 @@ hr {
 
 article {
     a {
-        text-decoration: underline;
-        text-decoration-color: $outline;
-        text-decoration-thickness: 2px;
+        border-bottom: 2px solid $outline;
         color: $text;
     }
     a:link {
+        text-decoration: none;
         transition-property: all;
         transition-duration: 0.35s;
     }
     a:hover {
         outline: 0;
-        text-decoration-color: $accent;
+        border-bottom: 2px solid $accent;
         opacity: 1;
     }
 }
@@ -361,8 +360,12 @@ h1.article_title {
 }
 
 nav.pagination {
+    padding: 25px;
+    padding-bottom: 50px;
     margin: 0 auto;
     border-top: 1px solid $accent2;
+    padding-top: 45px;
+    margin-top: 75px;
     display: block;
     z-index: 100;
     position: relative;
