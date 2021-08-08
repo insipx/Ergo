@@ -39,7 +39,7 @@
 {{ self::social(
         display="rss",
         icon="rss",
-        uri=get_url(path=config.feed_file | default(value="atom.xml"), lang=lang),
+        uri=get_url(path=config.feed_filename | default(value="atom.xml"), lang=lang),
         icon_class="fas",
         classes=classes
 ) }}
