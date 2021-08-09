@@ -3,7 +3,8 @@
 
 {% block content %}
 <nav id="overlord" class="overlord" >
-  {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
+  {% set base_url = get_url(path="/", lang=lang) %}
+  {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
   {% include "languages.html" %}
 </nav>
 

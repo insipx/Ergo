@@ -5,8 +5,9 @@
 <nav>{% include "languages.html" %}</nav>
 <header class="header">
   {% block header %}
+  {% set base_url = get_url(path="/", lang=lang) %}
   <figure class="user_logo">
-      <a href="{{config.base_url}}" style="background-image: url({{config.base_url}}/img/{{config.extra.profile}}"></a>
+      <a href="{{ base_url }}" style="background-image: url({{config.base_url}}/img/{{config.extra.profile}}"></a>
   </figure>
   <h2 class="site_title">{{config.title}}</h2>
   <div>{{ config.description | as_str | markdown(inline=true) | safe }}</div>
