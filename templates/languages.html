@@ -4,10 +4,7 @@
 {% if config.languages | length %}
 <div id="languageSelector">
     <ul>
-        {% set defpath = current_path %}
-        {% if current_path is starting_with("/" ~ lang) %}
-            {% set defpath = defpath | trim_start_matches(pat="/" ~ lang) %}
-        {% endif %}
+        {% set defpath = current_path | trim_start_matches(pat="/" ~ lang ~ "/") %}
 
         {% for l, value in config.languages %}
         <li>
