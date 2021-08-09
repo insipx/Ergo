@@ -1,29 +1,23 @@
 {% import "macros.html" as macros %}
 
 {% block language_selector %}
-{% set languages = config.languages | map(attribute="code") %}
-{% set default_language = config.default_language %}
-{% if languages | length %}
+{% if config.languages | length %}
 <div id="languageSelector">
     <ul>
         {% set defpath = current_path %}
-        {% if lang != default_language %}
-        {% set defpath = defpath | trim_start_matches(pat="/" ~ lang) %}
+        {% if current_path is starting_with("/" ~ lang) %}
+            {% set defpath = defpath | trim_start_matches(pat="/" ~ lang) %}
         {% endif %}
 
-        {% for l in languages | concat(with=default_language) | sort %}
+        {% for l, value in config.languages %}
         <li>
-            {% if l != lang %}
             <a href="{{get_url(path=defpath, lang=l)}}">
-            {% endif %}
             {% if config.extra.country_flags %}
                 {{ macros::country_flag(language=l) }}
             {% else %}
                 {{ l }}
             {% endif %}
-            {% if l != lang %}
             </a>
-            {% endif %}
         </li>
         {% endfor %}
 
