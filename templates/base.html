@@ -41,7 +41,7 @@
 
       <footer>
         {% block footer %}
-          {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
+          {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
           {{ macros::social_list(classes="foot_list", bsize="extra_small") }}
           {{ macros::theme_selector(themes=config.extra.color_themes) }}
         {% endblock footer %}
