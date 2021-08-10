@@ -41,6 +41,7 @@
 
       <footer>
         {% block footer %}
+          {% set base_url = get_url(path="/", lang=lang) %}
           {{ macros::mini_logo(classes="", title=config.title, siteurl=base_url, logourl=config.extra.profile) }}
           {{ macros::social_list(classes="foot_list", bsize="extra_small") }}
           {{ macros::theme_selector(themes=config.extra.color_themes) }}
