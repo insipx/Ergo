@@ -1,5 +1,5 @@
 +++
-title="My top of the best series of technical articles"
+title="Best series of technical articles"
 date=2021-08-28
 category="engineering"
 +++
