@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://nolik.github.io/blog"
+base_url = "https://nolik.github.io/"
 
 title = "The One Engineer Blog"
 # a description; you can use markdown here if you like
