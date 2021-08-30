@@ -16,5 +16,11 @@ Remarkable series in Martin Fowler blog - [Patterns of Distributed Systems](http
 ## Memory management in modern programming languages
 Fab series with awesome visualising of different [memory management models in modern languages](https://deepu.tech/memory-management-in-programming/).
 
-## TBD
+## JVM Anatomy Quarks
 
+[JVM Anatomy Quarks](https://shipilev.net/jvm/anatomy-quarks/) is the on-going mini-post series,
+where every post is describing some elementary piece of knowledge about JVM. The unimaginable work
+of [Aleksey Shipilëv](https://twitter.com/shipilev), I believe sooner or later a book will be
+published on the basis of this.
+
+## TBD
