@@ -18,6 +18,7 @@
                 <a href="{{ config.base_url }}" >{{ config.title }}</a>
                 <div class="menu_div" ></div>
             </li>
+            {% include "partials/menu-extra.html" %}
             {{ macros::social_common(classes="", icon_class="fab") }}
         </ul>
     </div>

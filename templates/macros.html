@@ -37,7 +37,7 @@
 
 {% if config.generate_feed %}
 {{ self::social(
-        display="rss",
+        display=config.feed_filename | default(value="atom.xml") | trim_end_matches(pat=".xml"),
         icon="rss",
         uri=get_url(path=config.feed_filename | default(value="atom.xml"), lang=lang),
         icon_class="fas",
