@@ -49,6 +49,6 @@ even complete navigation with opening all links with special shortcuts. And stil
 from the mouse, you should be ready that a lot of sites use some Native maps/ Frames that doesn't provide you ability to
 use navigation/link-opening without a mouse.
 
-## TBD
+## To be continued
 
 It's just start of my journey to use more keyboard/vim motions and reduce using of mouse, but let's see how it goes.
