@@ -38,6 +38,7 @@ series about how to use IdeaVim and even provide some config samples. IdeaVim ha
 conflicts with Idea shortcuts, but I still find IdeaVim option like a compromise between powerful IDE and vim features 
 at the same time. Who knows probably later I will find a straight to fully move into neoVim.
 
+
 ## What to do with Browsers navigation?
 
 If you decide to move out from mouse probably the most confusing part will be - how to interact with web in Browsers.
@@ -48,6 +49,7 @@ all navigation parts with it. Yah at the start it's pretty confusing, but later 
 even complete navigation with opening all links with special shortcuts. And still - there is no any way to fully escape 
 from the mouse, you should be ready that a lot of sites use some Native maps/ Frames that doesn't provide you ability to
 use navigation/link-opening without a mouse.
+
 
 ## To be continued
 
