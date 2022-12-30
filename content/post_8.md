@@ -1,5 +1,5 @@
 +++
-title="I came looking for copper, but found gold: Vim motions"
+title="I Came Looking For Copper And I Found Gold: Vim motions"
 date=2022-12-25
 category="tools"
 +++
