@@ -4,9 +4,7 @@ date=2022-12-25
 category="tools"
 +++
 
-Huh, what's the crazy year! War that change our lives. Also, I had some old dream to move away from mouse.
-Starting from tiling window DE adoption I used i3/sway I really impressed with power of tiling and shortcuts
-(btw I use arch). So what if I will go further? I decide that will be nice to move out from mouse using at all.
+Huh, what's the crazy year? The war that changes our lives... Also, I had some old dreams of moving away from the mouse control. Starting from tiling window DE adoption I used i3/sway I really impressed with the power of tiling and shortcuts (btw I use arch). So what if I will go further? I decide that it will be nice to move out from mouse using.
 
 
 ## Vim motions
