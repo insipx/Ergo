@@ -18,8 +18,10 @@
 
 {% macro social(display, icon, uri, icon_class, classes) %}
 <li {% if classes %}class="{{ classes }}"{% endif %}>
-    <a href="{{ uri }}" target="_blank">{{ display }}</a>
-    <i class="{{ icon_class }} fa-{{ icon }}"></i>
+    <a href="{{ uri }}" target="_blank">
+        {{ display }}
+        <i class="{{ icon_class }} fa-{{ icon }}"></i>
+    </a>
 </li>
 {% endmacro %}
 
