@@ -31,6 +31,12 @@
         <!-- load -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
         {% endblock head %}
+
+        {% block rss %}
+        {% if config.generate_feed %}
+        <link rel="alternate" type="{{ macros::feed_mimetype(feed_filename=config.feed_filename) }}" title="{{ config.title }} RSS" href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}">
+        {% endif %}
+        {% endblock rss %}
     </head>
 
     <body onload="main();">

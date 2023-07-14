@@ -71,3 +71,11 @@
 {% endif %}
 <img src="https://www.countryflags.io/{{language}}/flat/64.png"/>
 {% endmacro country_flag %}
+
+{% macro feed_mimetype(feed_filename) %}
+{%- if feed_filename == "rss.xml" -%}
+application/rss+xml
+{%- elif feed_filename == "atom.xml" -%}
+application/atom+xml
+{%- endif -%}
+{% endmacro feed_mimetype %}
