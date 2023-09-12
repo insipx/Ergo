@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <nav id="overlord" class="overlord" >
+        {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
+    </nav>
+
+    <section class="post_container">
+        <div class="post_list_item">
+            <h2>{{ term.name }}</h2>
+            {% for page in term.pages %}
+                <div>
+                    <span class="article_title">{{ page.date | date(format="%F") }}</span>
+                    <span class="article_link">
+                        <a href="{{ page.permalink }}">{{ page.title }}</a>
+                    </span>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock content %}

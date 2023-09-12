@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <nav id="overlord" class="overlord" >
+        {{ macros::mini_logo(classes="", title=config.title, siteurl=config.base_url, logourl=config.extra.profile) }}
+    </nav>
+
+    <div class="post_container">
+        <div class="post_list_item">
+            {{ terms | length }} tags in total
+        </div>
+        <div class="post_list_item">
+            {% for tag in terms %}
+                <p>
+                    <a href="{{ tag.permalink }}">
+                        {{ tag.name }}
+                        <span class="count">{{ tag.pages | length }}</span>
+                    </a>
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
