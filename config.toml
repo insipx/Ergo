@@ -7,15 +7,12 @@ description="\"*to develop the skill of correct thinking is in the first place t
 default_language = "en"
 
 highlight_theme = "solarized-light"
-generate_feed = true
+generate_feeds = true
+feed_filenames = ["atom.xml"]
 feed_limit = 20
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Gutenberg
-highlight_code = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
@@ -63,3 +60,8 @@ term = "pathname"
 
 [extra.font_awesome]
 kit = "e307e34624"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Gutenberg
+highlight_code = true
